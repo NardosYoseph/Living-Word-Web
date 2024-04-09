@@ -7,28 +7,30 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-16 ">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="col-span-8 place-self-center text-center sm:text-center justify-self-center"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-black mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
          { /* eslint-disable react/no-unescaped-entities */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello,I&rsquo;m{' '}
+             Wellcome,To{' '}
             </span>
             {/* eslint-enable react/no-unescaped-entities */}
             <br></br>
             <TypeAnimation
               sequence={[
-                "Nardos",
+                "Living Word",
                 1000,
-                "Full-stack",
+                "Believers",
                 1000,
-                "Software Developer",
+                "International",
+                1000,
+                "Church",
                 1000,
                
               ]}
@@ -37,21 +39,21 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-  I am a passionate full-stack software developer with a strong foundation in creating dynamic and user-friendly applications and I am dedicated to delivering high-quality solutions. Let's work together to bring your ideas to life!
-</p>
+          <p className="text-black text-base sm:text-lg mb-6 lg:text-xl">
+          A place where faith, community, and love intersect to create a vibrant and welcoming spiritual home.Come experience the warmth of our community and discover the transformative power of God's love.
+  </p>
           
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5 }} 
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
+          <div className="rounded-full bg-black w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
  
             <Image
-              src="/images/nardii.jpg"
+              src="/images/lwlogo.jpg"
               alt="my image"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
               width={400}

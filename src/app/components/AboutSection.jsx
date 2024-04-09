@@ -5,38 +5,38 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "Vision",
+    id: "Vision",
     content: (
       <ul className="list-disc pl-2">
-       <li>Flutter</li>
-        <li>React NextJS</li>
-        <li>NodeJS</li>
+       <li>To be a beacon of hope, transforming our community by sharing the love of Christ through impactful outreach programs.</li>
       </ul>
     ),
   },
   {
-    title: "Education",
-    id: "education",
+    title: "Mission",
+    id: "Mission",
     content: (
       <ul className="list-disc pl-2">
-        <li>Woldia University,BSC in Information Technology</li>
+        <li>To actively serve those in need through practical care, compassionate ministries, and opportunities to experience God's love, fostering a spirit of service and transformation within our community.</li>
       </ul>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Address",
+    id: "Address",
     content: (
       <ul className="list-disc pl-2">
-        <li>Girls Can Code</li>
+        <li>Dire Dawa: Sabyan Yohannes Building, at a distance of 100 meters</li>
+        <li>Addis Ababa: CMC near to gas station,Ejigayew Dibaba Building, ground floor</li>
+
       </ul>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("Vision");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -46,39 +46,40 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-black" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" alt="about" width={500} height={500} />
+        <Image src="/images/lwpas2.jpg" alt="about" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-black mb-4">About Us</h2>
           <p className="text-base lg:text-lg">
-            I am a full-stack software developer with a passion for creating
-            interactive and responsive web and Mobile applications. I have experience
-            working with React, Dart, Flutter, Node Git. 
-            I am a quick learner and I am always looking to expand my knowledge and skill set.
-            I am a team player and I am excited to work with others to create amazing applications.
-          </p>
+          Our journey began with a vision to build a sanctuary where individuals from all walks of life 
+          could come together to worship, grow, and serve. Our church family is committed to embodying the
+           teachings of Jesus Christ and spreading His message of hope and compassion to our congregation and
+           beyond. Whether you're a longtime member or a first-time visitor, we invite you to join us as we
+            strive to live out our faith through meaningful worship,inspiring fellowship, and impactful outreach
+           initiatives. Together, we seek to create a nurturing environment where everyone feels valued, supported,
+            and empowered to live a life rooted in faith and service. </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("Vision")}
+              active={tab === "Vision"}
             >
               {" "}
-              Skills{" "}
+              Vision{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              selectTab={() => handleTabChange("Mission")}
+              active={tab === "Mission"}
             >
               {" "}
-              Education{" "}
+              Mission{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("Address")}
+              active={tab === "Address"}
             >
               {" "}
-              Certifications{" "}
+              Address{" "}
             </TabButton>
           </div>
           <div className="mt-8">

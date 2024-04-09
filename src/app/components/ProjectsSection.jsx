@@ -5,40 +5,48 @@ import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
-
   {
     id: 1,
-    title: "Incident Tracking Website for Amhara-Bank",
-    description: "React nextjs",
-    image: "/images/aba.png",
-    tag: ["All", "Web"],
+    title: "Prayer",
+    description: "Sunday mornning 9:00 AM - 10:00 AM",
+    image: "/images/sundpray.jpg",
+    tag: ["All", "Weekly"],
+    gitUrl: "https://github.com/NardosYoseph/aba_db_incident_tracker",
+    previewUrl: "/",
+  },
+  {
+    id: 1,
+    title: "Worship",
+    description: "Sunday mornning 10:00 AM - 11:00 AM",
+    image: "/images/sund.jpg",
+    tag: ["All", "Weekly"],
     gitUrl: "https://github.com/NardosYoseph/aba_db_incident_tracker",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "E-commerce Application",
-    description: "Flutter Mobile App",
-    image: "/images/e-app2.png",
-    tag: ["All", "Mobile"],
+    title: "Word of God",
+    description: "Sunday mornning 11:00 AM - 7:00 PM",
+    image: "/images/lwpastor.jpg",
+    tag: ["All", "Weekly"],
     gitUrl: "https://github.com/NardosYoseph/Futter-e-commerce-app",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "Betting App",
-    description: "Flutter Desktop App",
-    image: "/images/betting1.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/NardosYoseph/Betting-App-with-Hive",
+    title: "Tuseday Prayers",
+    description: "Tuseday afternoon 4:00 AM-7:00 PM",
+    image: "/images/prayers.jpg",
+    tag: ["All", "Weekly"],
+    gitUrl: "https://github.com/NardosYoseph/Futter-e-commerce-app",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Event App",
-    description: "Flutter Mobile App",
-    image: "/images/event.jpg",
-    tag: ["All", "Mobile"],
+    title: "Visionary Generation",
+    description: "Every year july 30",
+    image: "/images/lwvgroup.jpg",
+    tag: ["All", "Yearly"],
     gitUrl: "https://github.com/NardosYoseph/Flutter-Event-App",
     previewUrl: "/",
   },
@@ -64,10 +72,10 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+      <h2 className="text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12">
+        Our Programmes
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-black flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -75,13 +83,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Weekly"
+          isSelected={tag === "Weekly"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Yearly"
+          isSelected={tag === "Yearly"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

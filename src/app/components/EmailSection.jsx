@@ -51,14 +51,15 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
+        <h5 className="text-xl font-bold text-black my-2">
+          Contact Us
         </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <p className="text-black mb-4 max-w-md">
           {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          We welcome any inquiries, prayer requests, or simply the opportunity to connect with you. 
+          Whether you're seeking spiritual guidance, have questions about our services, or want to learn
+           more about our church community, we're here to assist you. 
+          Please feel free to reach out to us. 
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/NardosYoseph">
@@ -76,7 +77,7 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="name"
-                className="text-white block mb-2 text-sm font-medium"
+                className="text-black block mb-2 text-sm font-medium"
               >
                 Your name
               </label>
@@ -86,14 +87,14 @@ const EmailSection = () => {
                 id="name"
                 required
                 onChange={handleChange} 
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="bg-white border border-black placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="your name"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="text-white block text-sm mb-2 font-medium"
+                className="text-black block text-sm mb-2 font-medium"
               >
                 Your email
               </label>
@@ -103,21 +104,21 @@ const EmailSection = () => {
                 id="email"
                 required
                 onChange={handleChange} 
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="nardos@email.com"
+                className="bg-white border border-black placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="name@email.com"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
+                className="text-black block text-sm mb-2 font-medium"
               >
                 Message
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="bg-white border border-black placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk about..."
                 onChange={handleChange} 
               />
