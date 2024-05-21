@@ -57,9 +57,9 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="text-black" id="login">
+    <section className={styles.container} id="login">
     <form className={styles.form} onSubmit={handleSubmit}>
-      <img src="/loginlogo.png" alt="Company Logo" />
+      <img src="/images/lwlogo.jpg" alt="Company Logo" className='rounded-full w-68 h-52'  />
       {/* <h1>Login</h1> */}
       <input type="text" placeholder="email" name="email" required onChange={handleChange}/>
       <input type="password" placeholder="password" name="password" onChange={handleChange}/>      

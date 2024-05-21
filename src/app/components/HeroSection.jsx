@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16 ">
+    <section className="lg:py-16 w-full min-w-screen" >
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -50,10 +50,10 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }} 
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-black w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
+          <div className="  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
  
             <Image
-              src="/images/lwlogo.jpg"
+              src="/images/cross.jpeg"
               alt="my image"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
               width={400}
