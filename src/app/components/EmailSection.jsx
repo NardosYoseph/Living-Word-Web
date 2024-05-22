@@ -125,7 +125,7 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
-              className="bg-[#6420AA] hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="bg-[#7469B6] hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>
