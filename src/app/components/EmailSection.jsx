@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import TabButton from "@/app/components/TabButton";
+import React, { useState,useTransition } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
@@ -9,7 +10,54 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const EmailSection = () => {
- 
+  const TAB_DATA = [
+    {
+      title: "Dire Dawa",
+      id: "Dire Dawa",
+      content: (
+        <ul className="list-disc pl-2">
+          
+          <li>Adress: Sabyan Yohannes Building, at a distance of 100 meters</li>
+          <li>Pastors: Misikr Abebe</li>
+          <li>Contact: +2511555555</li>
+    
+        </ul>
+      ),
+    },
+    {
+      title: "Addis Ababa",
+      id: "Addis Ababa",
+      content: (
+        <ul className="list-disc pl-2">
+          
+          <li>Adress: SCMC near to gas station, Ejigayew Dibaba Building, ground floor</li>
+          <li>Pastors: Habtamu Bekele</li>
+          <li>Contact: +2511555555</li>
+        </ul>
+      ),
+    },
+    {
+      title: "Canada",
+      id: "Canada",
+      content: (
+        <ul className="list-disc pl-2">
+          <li>Adress: Sabyan Yohannes Building, at a distance of 100 meters</li>
+          <li>Pastors: Misikr Abebe</li>
+          <li>Contact: +2511555555</li>
+     
+        </ul>
+      ),
+    },
+  ];
+  
+  const [tab, setTab] = useState("Dire Dawa");
+  const [isPending, startTransition] = useTransition();
+
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id);
+    });
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,20 +102,45 @@ const EmailSection = () => {
         <h5 className="text-xl font-bold text-black my-2">
           Contact Us
         </h5>
-        <p className="text-black mb-4 max-w-md">
+        <div className="mt-8 text-black">
+          <div className="flex flex-row justify-start mt-8">
+            <TabButton
+              selectTab={() => handleTabChange("Dire Dawa")}
+              active={tab === "Dire Dawa"}
+            >
+              Dire Dawa
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("Addis Ababa")}
+              active={tab === "Addis Ababa"}
+            >
+              Addis Ababa
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("Canada")}
+              active={tab === "Canada"}
+            >
+              Canada
+            </TabButton>
+          </div>
+            {TAB_DATA.find((t) => t.id === tab).content}
+          </div>
+        <div >
+        {/* <p className="text-black mb-4 max-w-md">
           {" "}
           We welcome any inquiries, prayer requests, or simply the opportunity to connect with you. 
           Whether you're seeking spiritual guidance, have questions about our services, or want to learn
            more about our church community, we're here to assist you. 
           Please feel free to reach out to us. 
-        </p>
+        </p> */}
+        </div>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/NardosYoseph">
-            <Image src={GithubIcon} alt="Github Icon" />
+          {/* <Link href="https://github.com/NardosYoseph">
+            <Image src={FacebookIcon} alt="Github Icon" />
           </Link>
           <Link href="https://www.linkedin.com/in/nardos-yosef-286088299/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div>
@@ -75,6 +148,9 @@ const EmailSection = () => {
  
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
+            <h5 className="text-xl font-bold text-black my-2">
+          To  {TAB_DATA.find((t) => t.id === tab).title} Church
+        </h5>
               <label
                 htmlFor="name"
                 className="text-black block mb-2 text-sm font-medium"

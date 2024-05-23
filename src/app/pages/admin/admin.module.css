@@ -1,0 +1,11 @@
+.cardsContainer {
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: 20px; 
+  }
+
+  .chartsContainer {
+    display: flex;
+    justify-content: space-between; 
+    margin: 20px;
+  }

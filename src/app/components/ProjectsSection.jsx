@@ -71,7 +71,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section id="Programmes">
       <h2 className="text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12">
         Our Programmes
       </h2>

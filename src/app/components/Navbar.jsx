@@ -12,7 +12,7 @@ const navLinks = [
   },
   {
     title: "Programmes",
-    path: "#projects",
+    path: "#Programmes",
   },
   {
     title: "Contact",
@@ -35,7 +35,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#EEEEEE] bg-opacity-100 ">
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-20 bg-[#904CA7] bg-opacity-100 ">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
@@ -64,18 +64,22 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-9 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                 <NavLink href={link.path} title={link.title} />
               </li>
+              
             ))}
+            <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>
             {!isLoggedIn ? (
               <li>
                 <NavLink href="/pages/users/login" title="Login" />
               </li>
             ) : (
               <li>
-                <span className="text-black">Welcome, {username}</span>
+                <span className="text-white sm:text-xl">Welcome, {username}</span>
               </li>
             )}
+<li><NavLink href="/pages/admin" title="Admin" /></li>
+
           </ul>
         </div>
       </div>

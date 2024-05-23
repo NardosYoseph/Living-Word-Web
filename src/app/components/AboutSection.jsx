@@ -3,46 +3,9 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
-const TAB_DATA = [
-  {
-    title: "Vision",
-    id: "Vision",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>To be a beacon of hope, transforming our community by sharing the love of Christ through impactful outreach programs.</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Mission",
-    id: "Mission",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>To actively serve those in need through practical care, compassionate ministries, and opportunities to experience God's love, fostering a spirit of service and transformation within our community.</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Address",
-    id: "Address",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Dire Dawa: Sabyan Yohannes Building, at a distance of 100 meters</li>
-        <li>Addis Ababa: CMC near to gas station, Ejigayew Dibaba Building, ground floor</li>
-      </ul>
-    ),
-  },
-];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("Vision");
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
+  
 
   return (
     <section className="relative text-black" id="about">
@@ -51,12 +14,12 @@ const AboutSection = () => {
         <Image
           src="/images/lwpas2.jpg"
           alt="about"
-          layout="fill"
-          objectFit="cover"
-          className="filter blur-14px"
+          fill
+          className="object-cover filter blur-14px"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
+  
       
       {/* Content */}
       <div className="relative z-10 md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -71,8 +34,7 @@ const AboutSection = () => {
             initiatives. Together, we seek to create a nurturing environment where everyone feels valued, supported,
             and empowered to live a life rooted in faith and service.
           </p>
-          
-          </div>
+        </div>
       </div>
     </section>
   );

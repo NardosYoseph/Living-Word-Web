@@ -1,62 +1,61 @@
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+ /* Align items to the start */
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  justify-content: center;
   height: 100vh;
-  position: relative;
-  overflow: auto;  /* Optional: Set a background color */
+  /* position: relative;
+  overflow: auto; */
+  padding: 0px;
 }
-
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.imageContainer {
+  flex: 1;
+  max-width: 40%;
+  height: 100%;
+  position: relative;
+  padding: 25%;
+}
+.imageContainer img {
   width: 100%;
   height: 100%;
-  background: url('/images/prayers.jpg') no-repeat center center;
-  background-size: cover;
-  filter: blur(14px); /* Adjust the blur amount as needed */
-  z-index: -1;
+  object-fit: cover;
 }
 
+
 .form {
+  padding: 30px;
+  flex: 1;
   background-color: var(--bgSoft);
+  max-width: 50%;
   padding: 30px;
   border-radius: 10px;
-  width: 500px;
-  height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  color: white;
+  color: black;
 }
 .form input::placeholder {
-  color: white;
+  color: black;
 }
 
-.form input {
+.form input, .form textarea {
   width: 100%;
   height: 30px;
   padding: 30px;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 5px;
   background-color: var(--bg);
-  color: white;
+  color: black;
 }
 
 .form button {
   width: 100%;
   height: 70px;
   padding: 30px;
-  background-color:#7469B6;
+  background-color:#6358a3;
   color: white;
   text-align: center;
   border: none;
@@ -67,8 +66,8 @@
   width: 100%;
   padding: 30px;
   background-color: var(--bg);
-  color: white;
-  border: 2px solid white;
+  color: black;
+  border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 30px;
 }
