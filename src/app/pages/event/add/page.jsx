@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import styles from "./addUser.module.css";
+import styles from "./addEvent.module.css";
 import ProtectedRoute from "@/app/lib/protecteRoute";
 //import PaginationManager from '@/app/lib/pagination_manager';
 import EventServices from '@/app/services/event_service';

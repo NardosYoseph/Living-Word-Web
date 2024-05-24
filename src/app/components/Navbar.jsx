@@ -64,11 +64,9 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-9 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                 <NavLink href={link.path} title={link.title} />
+                <NavLink href={link.path} title={link.title} />
               </li>
-              
             ))}
-            <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>
             {!isLoggedIn ? (
               <li>
                 <NavLink href="/pages/users/login" title="Login" />
@@ -78,8 +76,9 @@ const Navbar = () => {
                 <span className="text-white sm:text-xl">Welcome, {username}</span>
               </li>
             )}
-<li><NavLink href="/pages/admin" title="Admin" /></li>
-
+            <li>
+              <NavLink href="/pages/admin" title="Admin" />
+            </li>
           </ul>
         </div>
       </div>
@@ -90,6 +89,10 @@ const Navbar = () => {
             {
               title: !isLoggedIn ? "Login" : `Welcome, ${username}`,
               path: !isLoggedIn ? "/pages/users/login" : "#",
+            },
+            {
+              title: "Admin",
+              path: "/pages/admin",
             },
           ]}
         />

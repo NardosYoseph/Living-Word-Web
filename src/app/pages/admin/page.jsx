@@ -56,22 +56,21 @@ const AdminPage = () => {
     { month: 'Nov', data: 60 },
   ];
 
-  const eventData = [100, 50, 75, 120, 80];
+const eventData = [100, 50, 75, 120, 80];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4 mx-auto px-4 py-8 md:px-8 md:py-12">
 <AdminNavbar />
-      <div className={styles.cardsContainer}>
+      <div className="w-full flex flex-row items-center space-y-4 justify-center mb-20 pt-30">
           <Card title="New Users" value="20" percentage="20" />
           <Card title="New Events" value="10" percentage="10" />
         </div>
         <div  className={styles.chartsContainer}>
-          <div >
+          <div className="w-full md:w-3/4">
           <BarChart userData={userData} />
           </div>
           <PieChart EventData={eventData} />
           </div>
-        
     </div>
   );
 };

@@ -8,9 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'blurred-image': "url('/images/lwvgroup.jpg')" // Replace with your image path
-      },
     },
     colors: {
       ...colors,
