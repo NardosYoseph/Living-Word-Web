@@ -23,7 +23,8 @@
 }
 
 .card p {
-  margin: 0;
+  margin: 4px 0;
+  color: white;
   font-size: 18px;
   color: black;
 }
