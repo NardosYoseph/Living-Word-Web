@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import AdminNavLink from "./adminNavLink";
 
 
   const AdminNavbar = () => {
@@ -35,7 +36,7 @@ const navLinks = [
       }
     }, []);
     return(
-<nav className="fixed mx-auto top-0 left-0 right-0 z-20 bg-[#904CA7] bg-opacity-100 p-0">
+<nav className="fixed mx-auto top-0 left-0 right-0 z-20 bg-white bg-opacity-100 p-0">
 <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
@@ -48,18 +49,18 @@ const navLinks = [
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-9 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                 <NavLink href={link.path} title={link.title} />
+                 <AdminNavLink href={link.path} title={link.title} />
               </li>
               
             ))}
                  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>
          {!isLoggedIn ? (
               <li>
-                <NavLink href="/pages/users/login" title="Login" />
+                <AdminNavLink href="/pages/users/login" title="Login" />
               </li>
             ) : (
               <li>
-                <span className="text-white sm:text-xl">Welcome, {username}</span>
+                <span className="text-black sm:text-xl">Welcome, {username}</span>
               </li>
             )}
           </ul>

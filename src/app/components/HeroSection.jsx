@@ -7,15 +7,18 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16 w-full min-w-screen" >
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section className="lg:py-16 w-full min-w-screen justify-center items-center" >
+      <div className="grid grid-cols-1 sm:grid-cols-12 justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-center justify-self-center"
         >
-          <h1 className="text-black mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <br></br>
+          <br></br>
+          <br></br>
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
          { /* eslint-disable react/no-unescaped-entities */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
              Wellcome,To{' '}
@@ -39,9 +42,9 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-black text-base sm:text-lg mb-6 lg:text-xl">
-          A place where faith, community, and love intersect to create a vibrant and welcoming spiritual home.Come experience the warmth of our community and discover the transformative power of God's love.
-  </p>
+          <p className="text-white text-base sm:text-lg mb-6 lg:text-xl">
+          Psalm 91:4<br></br>
+"He will cover you with his feathers, and under his wings you will find refuge; his faithfulness will be your shield and rampart." </p>
           
         </motion.div>
         <motion.div
@@ -50,7 +53,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }} 
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
+          {/* <div className="  w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
  
             <Image
               src="/images/cross.jpeg"
@@ -59,7 +62,7 @@ const HeroSection = () => {
               width={400}
               height={400}
             />
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

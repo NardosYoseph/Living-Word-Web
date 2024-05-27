@@ -62,8 +62,8 @@ const AdminPage = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
 <AdminNavbar />
       <div className={styles.cardsContainer}>
-          <Card title="New Users" value="20" percentage="20" />
-          <Card title="New Events" value="10" percentage="10" />
+          <Card title="Users" value="20" percentage="20" />
+          <Card title="Events" value="10" percentage="10" />
         </div>
         <div  className={styles.chartsContainer}>
           <div >

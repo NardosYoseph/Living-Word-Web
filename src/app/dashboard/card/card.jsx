@@ -5,9 +5,11 @@ const Card = ({ title, value, percentage }) => {
   console.log(title)
   return (
     <div className={styles.card}>
-      <h3>{title}</h3>
+      <h2>{title} </h2>
+      <div>
       <p>Total: {value}</p>
       <p>Percentage: {percentage}%</p>
+    </div>
     </div>
   );
 };

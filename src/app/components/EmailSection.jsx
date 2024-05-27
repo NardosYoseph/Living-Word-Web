@@ -8,6 +8,10 @@ import Image from "next/image";
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PersonIcon from '@material-ui/icons/Person';
+import PhoneIcon from '@material-ui/icons/Phone';
+
 
 const EmailSection = () => {
   const TAB_DATA = [
@@ -16,10 +20,14 @@ const EmailSection = () => {
       id: "Dire Dawa",
       content: (
         <ul className="list-disc pl-2">
-          
-          <li>Adress: Sabyan Yohannes Building, at a distance of 100 meters</li>
-          <li>Pastors: Misikr Abebe</li>
-          <li>Contact: +2511555555</li>
+               <br></br>
+          <ul><LocationOnIcon className="inline mr-2 text-gray-500" />
+     
+          Adress: Sabyan Yohannes Building, at a distance of 100 meters</ul>     <br></br>
+          <ul>   <PersonIcon className="inline mr-2 text-gray-500" />
+          Pastors: Misikr Abebe</ul>     <br></br>
+          <ul><PhoneIcon className="inline mr-2 text-gray-500" />
+          Contact: +2511555555</ul>
     
         </ul>
       ),
@@ -29,10 +37,19 @@ const EmailSection = () => {
       id: "Addis Ababa",
       content: (
         <ul className="list-disc pl-2">
+               <br></br>
           
-          <li>Adress: SCMC near to gas station, Ejigayew Dibaba Building, ground floor</li>
-          <li>Pastors: Habtamu Bekele</li>
-          <li>Contact: +2511555555</li>
+          <ul><LocationOnIcon className="inline mr-2 text-gray-500" />
+            Adress: SCMC near to gas station, Ejigayew Dibaba Building,
+            <br></br>
+                ground floor</ul>
+            <br></br>
+            <ul>   <PersonIcon className="inline mr-2 text-gray-500" />
+            Pastors: Habtamu Bekele</ul>
+            <br></br>
+            <ul><PhoneIcon className="inline mr-2 text-gray-500" />
+          
+            Contact: +2511555555</ul>
         </ul>
       ),
     },
@@ -40,10 +57,17 @@ const EmailSection = () => {
       title: "Canada",
       id: "Canada",
       content: (
-        <ul className="list-disc pl-2">
-          <li>Adress: Sabyan Yohannes Building, at a distance of 100 meters</li>
-          <li>Pastors: Misikr Abebe</li>
-          <li>Contact: +2511555555</li>
+        <ul className="list-disc pl-2"><br></br>
+          <ul><LocationOnIcon className="inline mr-2 text-gray-500" />
+            Adress: Sabyan Yohannes Building, at a distance of 100 meters</ul>
+            <br></br>
+          <ul>   <PersonIcon className="inline mr-2 text-gray-500" />
+
+            Pastors: Misikr Abebe</ul>
+            <br></br>
+          <ul><PhoneIcon className="inline mr-2 text-gray-500" />
+          
+          Contact: +2511555555</ul>
      
         </ul>
       ),

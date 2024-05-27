@@ -32,6 +32,7 @@ const AddEventPage = () => {
     description: '',
     date: '',
     time: '',
+    adress: '',
     image: null,
 
   });
@@ -102,7 +103,7 @@ const AddEventPage = () => {
     if (response) {
       toast.success('event added successfully', { position: 'top-right' });
       setTimeout(() => {
-       // router.push('/dashboard/Incidents');
+        router.push('/pages');
       }, 1000);
 
     }
@@ -117,14 +118,15 @@ const AddEventPage = () => {
 
       <div className={styles.container}>
         <ToastContainer />
-        <div className={styles.imageContainer}>
+        {/* <div className={styles.imageContainer}>
         <Image
-          src="/images/eventadd3.jpg" // Provide the path to your image
+          src="/images/prayers.jpg" // Provide the path to your image
           alt="Description of the image"
           fill
           className="object-cover" // Cover the container
         />
-      </div>
+      </div> */}
+      <div className={styles.formContainer}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             type="text"
@@ -165,10 +167,17 @@ const AddEventPage = () => {
             required
             onChange={handleChange}
           />
-  
+       <input
+            type="text"
+            placeholder="adress"
+            name="adress"
+            required
+            onChange={handleChange}
+          />
           <button type="submit">Submit</button>
           {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         </form>
+        </div>
       </div>
       </div>
  //   </ProtectedRoute>
@@ -205,8 +214,9 @@ console.log("snapshot",snapshot);
 async function signInAnonymously() {
   try {
     const auth = getAuth();
+    console.log(auth);
     const credential = await signInAnonymouslyFirebase(auth);
-
+console.log(credential);
     if (credential.user) {
       console.log('Signed in anonymously as:', credential.user.uid); // Use user.uid for user ID
       return credential.user.uid; // Return the user ID for further use

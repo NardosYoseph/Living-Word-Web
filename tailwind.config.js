@@ -11,6 +11,9 @@ module.exports = {
       backgroundImage: {
         'blurred-image': "url('/images/lwvgroup.jpg')" // Replace with your image path
       },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
     },
     colors: {
       ...colors,

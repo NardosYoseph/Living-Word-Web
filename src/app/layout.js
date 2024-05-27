@@ -38,8 +38,8 @@ const inter = Inter({ subsets: ['latin'] })
 //const app = initializeApp(firebaseConfig);
 export default function RootLayout({ children }) {
  // firebase.initializeApp(firebaseConfig);
-console.log(app.options);
-  ApiClient.initialize('http://172.16.35.38:3001/api'); 
+//console.log(app.options);
+  ApiClient.initialize('http://172.16.35.39:3001/api'); 
   return (
 
     <html lang="en">

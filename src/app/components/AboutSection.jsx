@@ -12,7 +12,7 @@ const AboutSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/lwpas2.jpg"
+          src="/images/prayers.jpg"
           alt="about"
           fill
           className="object-cover filter blur-14px"
