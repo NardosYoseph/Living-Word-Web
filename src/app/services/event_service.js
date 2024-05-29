@@ -16,7 +16,7 @@ export default class EventServices {
       } 
        
     }
-    static async getIncidentsSearch(Name,page,size) {
+    static async getEventsSearch(Name,page,size) {
         const queryParam = `incident_name=${Name}`; // Construct the query parameter for the search value
         try{
           const search = await ApiClient.getInstance().getPaginated(`/incident/list?${queryParam}`,{},page,size);
@@ -26,7 +26,7 @@ export default class EventServices {
           return error;
       }
       }
-      static async getIncidentsFilter(priority,status) {
+      static async getEventsFilter(priority,status) {
         try {
             const search = await ApiClient.getInstance().get(`/incident/search`,{priority,status});
             console.log("API Response:", search);
@@ -50,7 +50,7 @@ export default class EventServices {
       }
       
       
-    static async getIncidentById(id) {
+    static async getEventById(id) {
         const client = ApiClient.getInstance();
      try{
       const response = await client.get(`/incident/${id}`);
@@ -61,7 +61,7 @@ export default class EventServices {
   }     
     }
 
-    static async updateIncidents(id, formData) {
+    static async updateEvents(id, formData) {
         const client = ApiClient.getInstance();
         // const params = {
         //   user_id: user_id,

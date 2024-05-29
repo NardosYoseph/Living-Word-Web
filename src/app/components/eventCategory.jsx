@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectTag = ({ name, onClick, isSelected }) => {
+const eventCategory = ({ name, onClick, isSelected }) => {
   const buttonStyles = isSelected
     ? "text-black border-primary-500"
     : "text-[#ADB7BE] border-slate-600 hover:border-black";
@@ -14,4 +14,4 @@ const ProjectTag = ({ name, onClick, isSelected }) => {
   );
 };
 
-export default ProjectTag;
+export default eventCategory;

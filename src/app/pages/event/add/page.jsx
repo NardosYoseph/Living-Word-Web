@@ -14,6 +14,7 @@ import { ref, uploadBytes, getDownloadURL, getStorage} from 'firebase/storage';
 import { getAuth} from 'firebase/auth';
 import { signInAnonymously as signInAnonymouslyFirebase } from 'firebase/auth'; 
 import AdminNavbar from '@/app/components/AdminNavbar';
+import { Category } from '@material-ui/icons';
 
 
 
@@ -29,6 +30,7 @@ const AddEventPage = () => {
  // console.log("eventOrganizrId",eventOrganizerId);
   const [formData, setFormData] = useState({
     title: '',
+    Category:'',
     description: '',
     date: '',
     time: '',
@@ -116,7 +118,7 @@ const AddEventPage = () => {
    <div>
         <AdminNavbar />
 
-      <div className={styles.container}>
+      <div className={`${styles.container} pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen`}>
         <ToastContainer />
         {/* <div className={styles.imageContainer}>
         <Image
@@ -126,7 +128,7 @@ const AddEventPage = () => {
           className="object-cover" // Cover the container
         />
       </div> */}
-      <div className={styles.formContainer}>
+      <div className={`${styles.formContainer} pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen`}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             type="text"
@@ -136,7 +138,12 @@ const AddEventPage = () => {
             onChange={handleChange}
           />
 
-
+<select name="category" id="category" value={formData.catagory} required onChange={handleChange}>
+            <option value={false}>Choose category</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Yearly">Yearly</option>
+            <option value="Special">Special</option>
+          </select>
 <textarea
             value={formData.description}
             name="description"
