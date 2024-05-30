@@ -16,6 +16,7 @@ export default class EventServices {
       } 
        
     }
+    
     static async getEventsSearch(Name,page,size) {
         const queryParam = `incident_name=${Name}`; // Construct the query parameter for the search value
         try{

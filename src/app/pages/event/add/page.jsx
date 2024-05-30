@@ -30,11 +30,11 @@ const AddEventPage = () => {
  // console.log("eventOrganizrId",eventOrganizerId);
   const [formData, setFormData] = useState({
     title: '',
-    Category:'',
+    category:'',
     description: '',
     date: '',
     time: '',
-    adress: '',
+    address: '',
     image: null,
 
   });
@@ -58,6 +58,7 @@ const AddEventPage = () => {
       ...formData,
       [name]: name === 'date' || name === 'time' ? value : String(value),
     });
+    console.log(value);
   };
   const handleUploadImage = async () => {
 
@@ -114,7 +115,7 @@ const AddEventPage = () => {
     }
   };
   return (
-   // <ProtectedRoute allowedRoles={['EVENT_ORGANIZER']}>
+    <ProtectedRoute allowedRoles={['ADMIN']}>
    <div>
         <AdminNavbar />
 
@@ -138,8 +139,8 @@ const AddEventPage = () => {
             onChange={handleChange}
           />
 
-<select name="category" id="category" value={formData.catagory} required onChange={handleChange}>
-            <option value={false}>Choose category</option>
+<select name="category" id="category" value={formData.category} onChange={handleChange}>
+            <option value="">Choose category</option>
             <option value="Weekly">Weekly</option>
             <option value="Yearly">Yearly</option>
             <option value="Special">Special</option>
@@ -176,8 +177,8 @@ const AddEventPage = () => {
           />
        <input
             type="text"
-            placeholder="adress"
-            name="adress"
+            placeholder="address"
+            name="address"
             required
             onChange={handleChange}
           />
@@ -187,7 +188,7 @@ const AddEventPage = () => {
         </div>
       </div>
       </div>
- //   </ProtectedRoute>
+    </ProtectedRoute>
   );
 
   async function uploadImage(image, userId) {

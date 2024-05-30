@@ -6,7 +6,7 @@ const EventCard = ({ imgUrl, title, description,date,time,address }) => {
   return (
     <div>
       <div
-        className="h-52 md:h-72 md:w-100 rounded-t-xl relative group"
+        className="h-59 md:h-72 md:w-100 rounded-t-xl relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
       </div>

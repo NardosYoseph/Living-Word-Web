@@ -11,7 +11,7 @@ const ProtectedRoute = ({ allowedRoles, children }) => {
   useEffect(() => {
    if (!allowedRoles.includes(role)) {
       
-      router.push('/dashboard');
+      router.push('/');
     }
   }, []);
 

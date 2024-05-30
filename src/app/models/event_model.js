@@ -1,16 +1,16 @@
 
 class Event {
-  constructor(id,title, description, date, time,image,address,catagory) {
+  constructor(id,title, description, date, time,image,address,category) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.date = date;
     this.time = time;
-    this.catagory=catagory;
+    this.category=category;
   //  this.price = price;
    // this.availableTickets = availableTickets;
     this.image = image;
-    this.address;
+    this.address=address;
 
     // this.status = status;
     // this.attendee=attendee;
