@@ -1,30 +1,33 @@
 import React from "react";
 import { CalendarIcon, ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 
-const EventCard = ({ imgUrl, title, description,date,time,address }) => {
+const EventCard = ({ imgUrl, title, description, date, time, address }) => {
   return (
-    <div>
+    <div className="rounded-xl overflow-hidden ">
       <div
-        className="h-59 md:h-72 md:w-100 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+        className="h-59 md:h-72 w-full relative"
+        style={{
+          background: `url(${imgUrl}) no-repeat center center`,
+          backgroundSize: "cover",
+        }}
       >
+        <div className="absolute inset-0  "></div>
       </div>
-      <div className="text-black rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
+      <div className="text-black bg-white p-6">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <div className="flex items-center text-sm text-gray-600 mb-1">
+        <div className="flex items-center text-sm text-black-600 mb-1">
           <CalendarIcon className="h-5 w-5 mr-2" />
           <span>{date}</span>
         </div>
-        <div className="flex items-center text-sm text-gray-600 mb-1">
+        <div className="flex items-center text-sm text-black-600 mb-1">
           <ClockIcon className="h-5 w-5 mr-2" />
           <span>{time}</span>
         </div>
-        <div className="flex items-center text-sm text-gray-600 mb-3">
+        <div className="flex items-center text-sm text-black-600 mb-3">
           <MapPinIcon className="h-5 w-5 mr-2" />
           <span>{address}</span>
         </div>
-        <p className="text-gray-800">{description}</p>
+        <p className="text-black-800">{description}</p>
       </div>
     </div>
   );

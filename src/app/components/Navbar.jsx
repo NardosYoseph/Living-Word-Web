@@ -39,23 +39,23 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-20 ${navbarOpen ? 'bg-black' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-20 ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link href="/" className="text-1xl md:text-5xl text-white font-semibold">
+        <Link href="/" className="text-1xl md:text-5xl text-black font-semibold">
           Living Word
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-white text-white hover:text-[#AD88C6] hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-black text-black hover:text-[#AD88C6] hover:border-black"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-white text-white hover:text-[#AD88C6] hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-black text-black hover:text-[#AD88C6] hover:border-white"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
@@ -75,7 +75,7 @@ const Navbar = () => {
             ) : (
               <>
                 <li>
-                  <span className="text-white sm:text-xl">Welcome, {username}</span>
+                  <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </li>
                 {isLoggedIn && isAdmin && (  // Check both login and role
                   <li>

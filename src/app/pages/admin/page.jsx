@@ -59,8 +59,10 @@ const AdminPage = () => {
 const eventData = [100, 50, 75, 120, 80];
 
   return (
+    
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4 mx-auto px-4 py-8 md:px-8 md:py-12">
 <AdminNavbar />
+<br></br>
       <div className={styles.cardsContainer}>
           <Card title="Users" value="20" percentage="20" />
           <Card title="Events" value="10" percentage="10" />
@@ -72,6 +74,7 @@ const eventData = [100, 50, 75, 120, 80];
           <PieChart EventData={eventData} />
           </div>
     </div>
+ 
   );
 };
 

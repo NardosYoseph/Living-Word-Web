@@ -12,6 +12,7 @@ const EventSection = () => {
       try {
         const response = await eventClient.getEvents();
         setEventsData(response.eventList);
+        console.log(eventsData)
       } catch (error) {
         console.error("Error fetching events:", error);
       }
@@ -82,7 +83,7 @@ const [eventsData, setEventsData] = useState([]);
               imgUrl={event.image}
               date={event.date}
               time={event.time}
-              address={event.adress}
+              address={event.address}
             />
           </motion.li>
         ))}

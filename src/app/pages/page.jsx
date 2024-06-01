@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const HomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-screen  flex-col bg-grey">
       <div className="relative w-full min-h-screen">
         <Image
           src="/images/lwpas2.jpg"

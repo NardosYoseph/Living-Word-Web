@@ -8,6 +8,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="lg:py-16 w-full min-w-screen justify-center items-center" >
+      
       <div className="grid grid-cols-1 sm:grid-cols-12 justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
