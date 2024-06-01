@@ -20,6 +20,7 @@ const EmailSection = () => {
       id: "Dire Dawa",
       content: (
         <ul className="list-disc pl-2">
+
                <br></br>
           <ul>
             {/* <LocationOnIcon className="inline mr-2 text-gray-500" /> */}
@@ -44,7 +45,7 @@ const EmailSection = () => {
           
           <ul>
             {/* <LocationOnIcon className="inline mr-2 text-gray-500" /> */}
-            Adress: SCMC near to gas station, Ejigayew Dibaba Building,
+            Adress: CMC near to gas station, Ejigayew Dibaba Building,
             <br></br>
                 ground floor</ul>
             <br></br>
