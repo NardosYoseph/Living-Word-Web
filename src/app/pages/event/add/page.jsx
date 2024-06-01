@@ -232,9 +232,6 @@ console.log(credential);
     return null;
   }
 }
-};
-@media (max-width: 768px) {  .${styles.mobileGrid} {
-  grid-template-columns: 1fr;  /* Stack cards vertically on mobile */
 }
-}
+
 export default AddEventPage;
