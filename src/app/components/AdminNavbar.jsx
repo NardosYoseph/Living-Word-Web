@@ -39,9 +39,8 @@ const navLinks = [
     return(
 <nav className={`fixed top-0 left-0 right-0 z-20 ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
 <div className="flex container lg:py-4 flex-wrap items-center justify-center mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+        <Link href={"/"}
+          className="text-2xl md:text-5xl text-black font-semibold"
         >
         Living Word
         </Link>
