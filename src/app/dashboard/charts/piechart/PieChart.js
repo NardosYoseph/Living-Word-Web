@@ -42,7 +42,7 @@ const PieChart = ({ EventData }) => {
   };
 
   return (
-    <div className={styles.piechartContainer}>
+    <div className="rounded-lg overflow-hidden w-80 h-80 py-4">
       <Pie data={chartData} options={chartOptions} />
     </div>
   );

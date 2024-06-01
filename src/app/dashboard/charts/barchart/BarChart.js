@@ -36,8 +36,8 @@ const BarChart = ({ userData }) => {
   };
 
   return (
-    <div className={styles.barchartContainer}>
-      <Bar data={chartData} options={chartOptions} />
+    <div className="rounded-lg overflow-hidden h-50 w-96 py-4">
+      <Bar data={chartData} options={chartOptions}  />
     </div>
   );
 };

@@ -67,13 +67,12 @@ const eventData = [100, 50, 75, 120, 80];
           <Card title="Users" value="20" percentage="20" />
           <Card title="Events" value="10" percentage="10" />
         </div>
-        <div  className='grid md:grid-cols-2 gap-4 md:gap-20'>
-          <div className="w-full md:w-3/4">
-          <BarChart userData={userData} />
-          </div>
-          <PieChart EventData={eventData} />
-          </div>
-    </div>
+        
+        <div className='grid md:grid-cols-2 gap-4 md:gap-20'>
+   <BarChart userData={userData} />
+  <PieChart EventData={eventData} />
+</div>
+</div>
  
   );
 };
