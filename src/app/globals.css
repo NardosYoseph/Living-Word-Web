@@ -15,8 +15,11 @@
     --background-end-rgb: white;
   }
 }
-
+.blue-shadow {
+  box-shadow: 0 4px 6px -1px rgba(243, 14, 213, 0.966), 0 2px 4px -1px rgba(71, 2, 80, 0.02);
+}
 body {
+  
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
