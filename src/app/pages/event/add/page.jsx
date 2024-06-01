@@ -14,7 +14,6 @@ import { ref, uploadBytes, getDownloadURL, getStorage} from 'firebase/storage';
 import { getAuth} from 'firebase/auth';
 import { signInAnonymously as signInAnonymouslyFirebase } from 'firebase/auth'; 
 import AdminNavbar from '@/app/components/AdminNavbar';
-import { Category } from '@material-ui/icons';
 
 
 
