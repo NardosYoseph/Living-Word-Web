@@ -61,11 +61,11 @@ const [eventsData, setEventsData] = useState([]);
           name="Yearly"
           isSelected={category === "Yearly"}
         />
-          <EventCategory
+          {/* <EventCategory
           onClick={handleCategoryChange}
           name="Special"
           isSelected={category === "Special"}
-        />
+        /> */}
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredEvents.map((event, index) => (
