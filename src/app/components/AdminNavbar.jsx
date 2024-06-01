@@ -39,10 +39,9 @@ const navLinks = [
     return(
 <nav className={`fixed top-0 left-0 right-0 z-20 shadow-xl ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
 <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link href={"/"}
-          className="text-2xl md:text-5xl text-black font-semibold"
-        >
-        Living Word
+<Link href='/' className="flex items-center space-x-2 text-1xl md:text-3xl text-black font-semibold">
+      <img src='/images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-12" />
+          <span>Living Word</span>
         </Link>
         <div className="mobile-menu block md:hidden ml-4 md:ml-0">
           {!navbarOpen ? (
@@ -94,45 +93,6 @@ const navLinks = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//         <div className="menu hidden md:block md:w-auto" id="navbar">
-//           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-9 mt-0">
-//             {navLinks.map((link, index) => (
-//               <li key={index}>
-//                  <AdminNavLink href={link.path} title={link.title} />
-//               </li>
-              
-//             ))}
-//                  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>
-//          {!isLoggedIn ? (
-//               <li>
-//                 <AdminNavLink href="/pages/users/login" title="Login" />
-//               </li>
-//             ) : (
-//               <li>
-//                 <span className="text-black sm:text-xl">Welcome, {username}</span>
-//               </li>
-//             )}
-//           </ul>
-//         </div>
-//       </div>
-     
-      
-// </nav>
     );
   }
   export default AdminNavbar;

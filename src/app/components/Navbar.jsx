@@ -41,8 +41,9 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-20 shadow-xl ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link href="/" className="text-1xl md:text-5xl text-black font-semibold">
-          Living Word
+     <Link href='/' className="flex items-center space-x-2 text-1xl md:text-3xl text-black font-semibold">
+      <img src='images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-12" />
+          <span>Living Word</span>
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
