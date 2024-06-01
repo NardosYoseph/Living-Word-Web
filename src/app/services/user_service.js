@@ -1,6 +1,5 @@
+"use client"
 import ApiClient from "@/app/lib/HttpRequestManager/api_client";
-
-
 
 export default class UserServices {
 
