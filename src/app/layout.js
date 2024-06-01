@@ -39,7 +39,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function RootLayout({ children }) {
  // firebase.initializeApp(firebaseConfig);
 //console.log(app.options);
-  ApiClient.initialize('http://172.16.35.39:3001/api'); 
+  ApiClient.initialize('https://livingword.onrender.com/api'); 
   return (
 
     <html lang="en">
