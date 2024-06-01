@@ -1,9 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
-import styles from "../chart.module.css"
-import { Chart, ArcElement, LineElement, PointElement, BarElement, ChartController, LinearScale, CategoryScale, Title, Tooltip, Legend, PolarAreaController, RadarController } from 'chart.js';
-
 
 const BarChart = ({ userData }) => {
   // Extract month labels and data values from userData

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import styles from "../chart.module.css";
 import { Chart, ArcElement, LineElement, PointElement, BarElement, ChartController, LinearScale, CategoryScale, Title, Tooltip, Legend, PolarAreaController, RadarController } from 'chart.js';
 
 const PieChart = ({ EventData }) => {

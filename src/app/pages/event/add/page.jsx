@@ -113,28 +113,20 @@ const AddEventPage = () => {
     <ProtectedRoute allowedRoles={['ADMIN']}>
    <div>
         <AdminNavbar />
-
-      <div className={`${styles.container} pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen`}>
-        <ToastContainer />
-        {/* <div className={styles.imageContainer}>
-        <Image
-          src="/images/prayers.jpg" // Provide the path to your image
-          alt="Description of the image"
-          fill
-          className="object-cover" // Cover the container
-        />
-      </div> */}
-      <div className={`${styles.formContainer} pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen`}>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <div className="container flex min-h-screen w-full justify-center items-center bg-cover bg-center py-4 blur-5px" style={{ backgroundImage: `url('/images/prayers.jpg')` }}>
+       <ToastContainer />
+      <div className="formContainer w-full max-w-lg p-8 bg-white bg-opacity-80 rounded-lg shadow-md pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen ">
+        <form className="form flex flex-col items-center gap-6" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="title"
             name="title"
             required
             onChange={handleChange}
+            className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
           />
 
-<select name="category" id="category" value={formData.category} onChange={handleChange}>
+<select name="category" id="category" value={formData.category} onChange={handleChange} className="w-full h-18 p-4 border-2 border-black rounded-md bg-transparent">
             <option value="">Choose category</option>
             <option value="Weekly">Weekly</option>
             <option value="Yearly">Yearly</option>
@@ -147,12 +139,14 @@ const AddEventPage = () => {
             rows={16}
             onChange={handleChange}
             placeholder="Write your description here"
+            className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
           />
           <input
             type="file"
             name="image"
             accept="image/*"
             onChange={handleImageChange}
+            className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent"
           />
           <input
       type="date"
@@ -161,6 +155,7 @@ const AddEventPage = () => {
       required
       onChange={handleChange}
       min={minDate}
+      className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent"
     />
 
           <input
@@ -169,6 +164,7 @@ const AddEventPage = () => {
             name="time"
             required
             onChange={handleChange}
+            className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent"
           />
        <input
             type="text"
@@ -176,8 +172,10 @@ const AddEventPage = () => {
             name="address"
             required
             onChange={handleChange}
+            className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
           />
-          <button type="submit">Submit</button>
+          <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md">
+            Create Event</button>
           {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         </form>
         </div>
