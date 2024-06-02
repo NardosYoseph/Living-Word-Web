@@ -124,7 +124,7 @@ const EmailSection = () => {
 
     // Replace these values with your Email.js template ID, user ID, and service ID
     const templateParams = {
-      to_name: 'Nardos Yosef',
+      to_name: 'Pastor Misker',
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,

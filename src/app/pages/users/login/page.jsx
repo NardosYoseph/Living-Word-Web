@@ -68,9 +68,9 @@ const LoginForm = () => {
       <input type="password" placeholder="password" name="password" onChange={handleChange}/>      
       
       <button type="submit">Login</button>
-      <Link href="/forgotPassword">forgot password?</Link>
+      {/* <Link href="/forgotPassword">forgot password?</Link> */}
       <p>don't have an account?   <Link href="/pages/users/register">signup</Link></p>
-      
+       
     </form>
     </section>
   );
