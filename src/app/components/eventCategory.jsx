@@ -6,7 +6,7 @@ const eventCategory = ({ name, onClick, isSelected }) => {
     : "text-[#ADB7BE] border-slate-600 hover:border-black";
   return (
     <button
-      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer w-30`}
       onClick={() => onClick(name)}
     >
       {name}
