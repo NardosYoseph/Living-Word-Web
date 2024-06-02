@@ -42,7 +42,7 @@ const [eventsData, setEventsData] = useState([]);
 
   return (
     <section id="Programmes">
-      <h2 className="text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-black mt-8 mb-4 md:mb-8">
         Programmes News
       </h2>
       <div className="text-black flex flex-row w-full min-w-full overflow-x-auto no-scrollbar gap-2 py-6 ">
@@ -67,7 +67,7 @@ const [eventsData, setEventsData] = useState([]);
           isSelected={category === "Special"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid top-0 md:grid-cols-3 gap-8 md:gap-12">
         {filteredEvents.map((event, index) => (
           <motion.li
             key={index}
