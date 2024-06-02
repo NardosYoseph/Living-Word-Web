@@ -8,7 +8,7 @@ import Image from "next/image";
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { MapPinIcon, UserIcon, PhoneIcon} from '@heroicons/react/24/outline';
 // import PersonIcon from '@material-ui/icons/Person';
 // import PhoneIcon from '@material-ui/icons/Phone';
 
@@ -23,14 +23,14 @@ const EmailSection = () => {
 
                <br></br>
           <ul>
-            {/* <LocationOnIcon className="inline mr-2 text-gray-500" /> */}
+            <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
      
           Adress: Sabyan Yohannes Building, at a distance of 100 meters</ul>     <br></br>
           <ul>  
-             {/* <PersonIcon className="inline mr-2 text-gray-500" /> */}
+             <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
           Pastors: Misikr Abebe</ul>     <br></br>
           <ul>
-            {/* <PhoneIcon className="inline mr-2 text-gray-500" /> */}
+            <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
           Contact: +2511555555</ul>
     
         </ul>
@@ -44,18 +44,17 @@ const EmailSection = () => {
                <br></br>
           
           <ul>
-            {/* <LocationOnIcon className="inline mr-2 text-gray-500" /> */}
+          <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
             Adress: CMC near to gas station, Ejigayew Dibaba Building,
             <br></br>
                 ground floor</ul>
             <br></br>
             <ul>   
-              {/* <PersonIcon className="inline mr-2 text-gray-500" /> */}
+            <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
             Pastors: Habtamu Bekele</ul>
             <br></br>
             <ul>
-              {/* <PhoneIcon className="inline mr-2 text-gray-500" /> */}
-          
+            <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
             Contact: +2511555555</ul>
         </ul>
       ),
@@ -66,16 +65,15 @@ const EmailSection = () => {
       content: (
         <ul className="list-disc pl-2"><br></br>
           <ul>
-            {/* <LocationOnIcon className="inline mr-2 text-gray-500" /> */}
+          <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
             Adress: Sabyan Yohannes Building, at a distance of 100 meters</ul>
             <br></br>
           <ul> 
-              {/* <PersonIcon className="inline mr-2 text-gray-500" /> */}
-
+          <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
             Pastors: Misikr Abebe</ul>
             <br></br>
           <ul>
-            {/* <PhoneIcon className="inline mr-2 text-gray-500" /> */}
+          <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
           
           Contact: +2511555555</ul>
      
