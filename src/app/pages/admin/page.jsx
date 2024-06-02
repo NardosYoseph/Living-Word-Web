@@ -63,11 +63,11 @@ const eventData = [100, 50, 75];
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4 mx-auto px-4 py-8 md:px-8 md:py-12">
 <AdminNavbar />
 <br></br>
-      <div className='grid md:grid-cols-2 gap-4 md:gap-8'>
+      <div className='grid md:grid-cols-2 gap-4 md:gap-8 mt-20'>
           <Card title="Users" value="50" percentage="20" />
           <Card title="Events" value="10" percentage="10" />
         </div>
-        <div className='grid md:grid-cols-2 gap-4 md:gap-20'>
+        <div className='grid md:grid-cols-2 gap-2 md:gap-10 mt-5'>
    <BarChart userData={userData} />
   <PieChart EventData={eventData} />
 </div>
