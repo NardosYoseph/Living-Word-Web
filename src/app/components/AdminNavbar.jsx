@@ -75,7 +75,7 @@ const navLinks = [
               </li>
               
             ))}
-                 <li></li>  <li></li>  <li></li>  <li></li>  
+                
                  <ul>
                   <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </ul>
