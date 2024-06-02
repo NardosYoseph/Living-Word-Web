@@ -24,14 +24,13 @@ const EmailSection = () => {
                <br></br>
           <ul>
             <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-     
-          Adress: Sabyan Yohannes Building, at a distance of 100 meters</ul>     <br></br>
+     Sabyan Yohannes Building, at a distance of 100 meters</ul>     <br></br>
           <ul>  
              <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-          Pastors: Misikr Abebe</ul>     <br></br>
+          Pastors  Misikr Abebe</ul>     <br></br>
           <ul>
             <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-          Contact: +2511555555</ul>
+          +2511555555</ul>
     
         </ul>
       ),
@@ -45,17 +44,17 @@ const EmailSection = () => {
           
           <ul>
           <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Adress: CMC near to gas station, Ejigayew Dibaba Building,
-            <br></br>
+          CMC near to gas station, Ejigayew Dibaba Building,
+            {/* <br></br> */}
                 ground floor</ul>
             <br></br>
             <ul>   
             <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Pastors: Habtamu Bekele</ul>
+            Pastors  Habtamu Bekele</ul>
             <br></br>
             <ul>
             <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Contact: +2511555555</ul>
+            +2511555555</ul>
         </ul>
       ),
     },{
@@ -67,17 +66,17 @@ const EmailSection = () => {
           
           <ul>
           <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Adress: CMC near to gas station, Ejigayew Dibaba Building,
-            <br></br>
+            CMC near to gas station, Ejigayew Dibaba Building,
+            {/* <br></br> */}
                 ground floor</ul>
             <br></br>
             <ul>   
             <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Pastors: Habtamu Bekele</ul>
+            Pastors  Habtamu Bekele</ul>
             <br></br>
             <ul>
             <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Contact: +2511555555</ul>
+            +2511555555</ul>
         </ul>
       ),
     },
@@ -88,18 +87,16 @@ const EmailSection = () => {
         <ul className="list-disc pl-2"><br></br>
           <ul>
           <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Adress: Sabyan Yohannes Building, at a distance of 100 meters</ul>
+            Sabyan Yohannes Building, at a distance of 100 meters</ul>
             <br></br>
           <ul> 
           <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-            Pastors: Misikr Abebe</ul>
+            Pastors  Misikr Abebe</ul>
             <br></br>
           <ul>
           <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
-          
-          Contact: +2511555555</ul>
-     
-        </ul>
+        +2511555555</ul>
+      </ul>
       ),
     },
   ];
@@ -206,7 +203,7 @@ const EmailSection = () => {
       <div>
         
  
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col mt-8" onSubmit={handleSubmit}>
             <div className="mb-6">
             <h5 className="text-xl font-bold text-black my-2">
           To  {TAB_DATA.find((t) => t.id === tab).title} Church
