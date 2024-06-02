@@ -43,20 +43,20 @@ const AdminPage = () => {
 
   // Sample data for the charts
   const userData = [
-    { month: 'Jan', data: 20 },
-    { month: 'Feb', data: 30 },
-    { month: 'Mar', data: 40 },
-    { month: 'Apr', data: 100 },
-    { month: 'May', data: 80 },
-    { month: 'Jun', data: 10 },
-    { month: 'Jul', data: 60 },
-    { month: 'Aug', data: 70 },
-    { month: 'Sep', data: 60 },
-    { month: 'Oct', data: 90 },
-    { month: 'Nov', data: 60 },
+    { month: 'Jan', data: 0 },
+    { month: 'Feb', data: 0 },
+    { month: 'Mar', data: 0 },
+    { month: 'Apr', data: 10 },
+    { month: 'May', data: 30 },
+    { month: 'Jun', data: 15 },
+    { month: 'Jul', data: 13 },
+    { month: 'Aug', data: 6 },
+    { month: 'Sep', data: 5 },
+    { month: 'Oct', data: 4 },
+    { month: 'Nov', data: 4 },
   ];
 
-const eventData = [100, 50, 75, 120, 80];
+const eventData = [100, 50, 75];
 
   return ( 
     <ProtectedRoute allowedRoles={['ADMIN']}>
@@ -64,7 +64,7 @@ const eventData = [100, 50, 75, 120, 80];
 <AdminNavbar />
 <br></br>
       <div className='grid md:grid-cols-2 gap-4 md:gap-8'>
-          <Card title="Users" value="20" percentage="20" />
+          <Card title="Users" value="50" percentage="20" />
           <Card title="Events" value="10" percentage="10" />
         </div>
         <div className='grid md:grid-cols-2 gap-4 md:gap-20'>

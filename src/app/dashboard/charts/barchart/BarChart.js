@@ -11,7 +11,7 @@ const BarChart = ({ userData }) => {
     labels: labels,
     datasets: [
       {
-        label: 'Events',
+        label: 'Users',
         data: dataValues,
         backgroundColor: 'rgba(46, 204, 113, 0.7)', // Translucent green for solved
         borderColor: 'rgba(46, 204, 113, 1)', // Solid green border

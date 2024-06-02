@@ -7,7 +7,7 @@ const Card = ({ title, value, percentage }) => {
       <h2 className="text-xl font-bold mb-2">{title} </h2>
       <div>
       <p className="text-gray-700">Total: {value}</p>
-      <p className="text-gray-700">Percentage: {percentage}%</p>
+      <p className="text-gray-700">This Month: {percentage}%</p>
     </div>
     </div>
   );
