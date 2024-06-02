@@ -76,10 +76,7 @@ const navLinks = [
               
             ))}
                  <li></li>  <li></li>  <li></li>  <li></li>  
-          </ul>
-        </div>
-    
-                <ul>
+                 <ul>
                   <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </ul>
                 <ul>
@@ -87,6 +84,10 @@ const navLinks = [
                     Logout
                   </button>
                 </ul>
+          </ul>
+        </div>
+    
+             
       
         </div>
       {navbarOpen && (
