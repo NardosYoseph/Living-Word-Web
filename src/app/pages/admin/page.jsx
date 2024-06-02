@@ -13,7 +13,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import AdminNavbar from "@/app/components/AdminNavbar";
-
+import ProtectedRoute from "@/app/lib/protecteRoute";
 const AdminPage = () => {
   const router = useRouter();
   const navLinks = [
@@ -59,6 +59,7 @@ const AdminPage = () => {
 const eventData = [100, 50, 75, 120, 80];
 
   return ( 
+    <ProtectedRoute allowedRoles={['ADMIN']}>
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4 mx-auto px-4 py-8 md:px-8 md:py-12">
 <AdminNavbar />
 <br></br>
@@ -71,6 +72,7 @@ const eventData = [100, 50, 75, 120, 80];
   <PieChart EventData={eventData} />
 </div>
 </div>
+</ProtectedRoute>
   );
 };
 
