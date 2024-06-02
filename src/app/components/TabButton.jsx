@@ -10,7 +10,7 @@ const TabButton = ({ active, selectTab, children }) => {
   const buttonClasses = active ? "text-black" : "text-[#ADB7BE]";
 
   return (
-    <button onClick={selectTab}>
+    <button onClick={selectTab} className="flex-shrink-0">
       <p className={`mr-3 font-semibold hover:text-black ${buttonClasses}`}>
         {children}
       </p>
