@@ -58,6 +58,28 @@ const EmailSection = () => {
             Contact: +2511555555</ul>
         </ul>
       ),
+    },{
+      title: "Djibuti",
+      id: "Djibuti",
+      content: (
+        <ul className="list-disc pl-2">
+               <br></br>
+          
+          <ul>
+          <MapPinIcon className="h-6 w-6 inline mr-2 text-gray-500" />
+            Adress: CMC near to gas station, Ejigayew Dibaba Building,
+            <br></br>
+                ground floor</ul>
+            <br></br>
+            <ul>   
+            <UserIcon className="h-6 w-6 inline mr-2 text-gray-500" />
+            Pastors: Habtamu Bekele</ul>
+            <br></br>
+            <ul>
+            <PhoneIcon className="h-6 w-6 inline mr-2 text-gray-500" />
+            Contact: +2511555555</ul>
+        </ul>
+      ),
     },
     {
       title: "Canada",
@@ -135,7 +157,7 @@ const EmailSection = () => {
           Contact Us
         </h5>
         <div className="mt-8 text-black">
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row overflow-x-auto no-scrollbar mt-8">
             <TabButton
               selectTab={() => handleTabChange("Dire Dawa")}
               active={tab === "Dire Dawa"}
@@ -147,6 +169,12 @@ const EmailSection = () => {
               active={tab === "Addis Ababa"}
             >
               Addis Ababa
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("Djibuti")}
+              active={tab === "Djibuti"}
+            >
+              Djibuti
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("Canada")}
