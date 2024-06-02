@@ -100,6 +100,10 @@ const navLinks = [
               title:`Welcome, ${username}`,
               path: "#",
             },
+            {
+              title: isLoggedIn ? "Logout" : "",
+              onClick: handleLogout // Change the path to the logout endpoint or page
+            },
           ]}
         />
       )}
