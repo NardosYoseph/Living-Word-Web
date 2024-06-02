@@ -10,7 +10,7 @@ const Footer = () => {
         <p className="text-slate-600">All rights reserved.</p>
         {/* Mention the development company */}
         <p className="text-slate-600">
-        <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-blue-500">Cassiopeia Technologies</a></p>
+        <a href="/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Cassiopeia Technologies</a></p>
       </div>
     </footer>
   );
