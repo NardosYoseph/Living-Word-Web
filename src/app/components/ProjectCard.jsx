@@ -5,7 +5,7 @@ const EventCard = ({ imgUrl, title, description, date, time, address }) => {
   return (
     <div className="rounded-xl overflow-hidden ">
       <div
-        className="h-59 md:h-72 w-full relative"
+        className="h-48 md:h-72 w-full relative bg-cover bg-center"
         style={{
           background: `url(${imgUrl}) no-repeat center center`,
           backgroundSize: "cover",
