@@ -114,7 +114,11 @@ const Navbar = () => {
             {
               title:isLoggedIn && isAdmin? "Admin page":"",
               path:isLoggedIn && isAdmin? "/pages/admin":"",
-            }
+            },
+            {
+              title: isLoggedIn ? "Logout" : "",
+              path: isLoggedIn ? "/pages" : "", // Change the path to the logout endpoint or page
+            },
          
           ]}
         />
