@@ -45,7 +45,7 @@ const [eventsData, setEventsData] = useState([]);
       <h2 className="text-center text-4xl font-bold text-black mt-8 mb-4 md:mb-8">
         Programmes News
       </h2>
-      <div className="text-black flex flex-row w-full min-w-full overflow-x-auto no-scrollbar gap-2 py-6 ">
+      <div className="text-black flex flex-row w-full min-w-full overflow-x-auto scrollbar gap-2 py-6 ">
       <EventCategory
           onClick={handleCategoryChange}
           name="All"
