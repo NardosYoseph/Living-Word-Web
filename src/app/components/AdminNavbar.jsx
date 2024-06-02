@@ -78,18 +78,16 @@ const navLinks = [
                  <li></li>  <li></li>  <li></li>  <li></li>  
           </ul>
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+    
                 <ul>
                   <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </ul>
-             
-              
-        </div>
-        <ul>
+                <ul>
                   <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
                     Logout
                   </button>
                 </ul>
+      
         </div>
       {navbarOpen && (
         <MenuOverlay
