@@ -20,7 +20,7 @@ const HomePage = () => {
         />
         <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
 
-        <div className="relative z-10">
+        <div className="relative z-50">
           <Navbar />
           <HeroSection />
         </div>
