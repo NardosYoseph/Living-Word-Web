@@ -90,11 +90,13 @@ const Navbar = () => {
                     <NavLink href="/pages/admin" title="Admin page" />
                   </li>
                 )}
+                {isLoggedIn && (  
                        <li>
                   <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
                     Logout
                   </button>
                 </li>
+                   )}
               </>
             )}
           </ul>
@@ -116,6 +118,8 @@ const Navbar = () => {
          
           ]}
         />
+        
+        
       )}
     </nav>
   );

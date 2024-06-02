@@ -79,11 +79,13 @@ const navLinks = [
                  <ul>
                   <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </ul>
-                <ul>
+                {isLoggedIn && (  
+                       <li>
                   <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
                     Logout
                   </button>
-                </ul>
+                </li>
+                   )}
           </ul>
         </div>
     
