@@ -117,7 +117,7 @@ const Navbar = () => {
             },
             {
               title: isLoggedIn ? "Logout" : "",
-              path: isLoggedIn ? "/pages" : "", // Change the path to the logout endpoint or page
+              onClick:{handleLogout} // Change the path to the logout endpoint or page
             },
          
           ]}

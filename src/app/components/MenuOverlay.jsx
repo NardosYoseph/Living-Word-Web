@@ -6,7 +6,14 @@ const MenuOverlay = ({ links }) => {
     <ul className="flex flex-col py-4 items-center">
       {links.map((link, index) => (
         <li key={index}>
-          <NavLink href={link.path} title={link.title} />
+          {/* Check if an onClick handler is provided */}
+          {link.onClick ? (
+            <button onClick={link.onClick} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
+              {link.title}
+            </button>
+          ) : (
+            <NavLink href={link.path} title={link.title} />
+          )}
         </li>
       ))}
     </ul>
