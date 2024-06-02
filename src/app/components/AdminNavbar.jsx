@@ -36,6 +36,13 @@ const navLinks = [
         setUsername(storedUsername);
       }
     }, []);
+    
+  const handleLogout = () => {
+    // Clear localStorage
+    localStorage.clear();
+    // Redirect to the login page or any other desired page
+    window.location.href = "/pages";
+  };
     return(
 <nav className={`fixed top-0 left-0 right-0 z-20 shadow-xl ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
 <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
@@ -68,15 +75,21 @@ const navLinks = [
               </li>
               
             ))}
-                 <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>
+                 <li></li>  <li></li>  <li></li>  <li></li>  
           </ul>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
                 <ul>
                   <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </ul>
-           
+             
+              
         </div>
+        <ul>
+                  <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
+                    Logout
+                  </button>
+                </ul>
         </div>
       {navbarOpen && (
         <MenuOverlay

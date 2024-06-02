@@ -38,10 +38,16 @@ const Navbar = () => {
     }
   }, []);
 
+  const handleLogout = () => {
+    // Clear localStorage
+    localStorage.clear();
+    // Redirect to the login page or any other desired page
+    window.location.href = "/pages";
+  };
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 shadow-xl ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-     <Link href='/' className="flex items-center space-x-2 text-1xl md:text-3xl text-black font-semibold">
+      <div className="flex left-0 right-0 container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+     <Link href='/' className="flex items-start space-x-2 text-1xl md:text-3xl text-black font-semibold">
       <img src='images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-12" />
           <span>Living Word</span>
         </Link>
@@ -68,7 +74,7 @@ const Navbar = () => {
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />
               </li>
-            ))} <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+            ))} <li></li><li></li><li></li><li></li><li></li><li></li>
            {!isLoggedIn ? (
               <li>
                 <NavLink href="/pages/users/login" title="Login" />
@@ -78,11 +84,17 @@ const Navbar = () => {
                 <li>
                   <span className="text-black sm:text-xl">Welcome, {username}</span>
                 </li>
+         
                 {isLoggedIn && isAdmin && (  // Check both login and role
                   <li>
-                    <NavLink href="/pages/admin" title="Admin" />
+                    <NavLink href="/pages/admin" title="Admin page" />
                   </li>
                 )}
+                       <li>
+                  <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
+                    Logout
+                  </button>
+                </li>
               </>
             )}
           </ul>
@@ -98,9 +110,10 @@ const Navbar = () => {
             },
             
             {
-              title:isLoggedIn && isAdmin? "Admin":"",
+              title:isLoggedIn && isAdmin? "Admin page":"",
               path:isLoggedIn && isAdmin? "/pages/admin":"",
-            },
+            }
+         
           ]}
         />
       )}
