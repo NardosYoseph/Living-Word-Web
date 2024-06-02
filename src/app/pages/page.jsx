@@ -7,6 +7,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import EmailSection from "../components/EmailSection";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -30,6 +31,7 @@ const HomePage = () => {
         <AboutSection />
         <ProjectsSection />
         <EmailSection />
+        <Footer/>
       </div>
     </main>
   );
