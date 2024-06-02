@@ -4,7 +4,7 @@ import { Chart, ArcElement, LineElement, PointElement, BarElement, ChartControll
 
 const PieChart = ({ EventData }) => {
   const chartData = {
-    labels: ['Weekly', 'Yearly', 'Special'],
+    labels: ['Weekly Events', 'Yearly Events', 'Special Events'],
     datasets: [
       {
         data: EventData, // Ensure data prop contains the corresponding values for each category
