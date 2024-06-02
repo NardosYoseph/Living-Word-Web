@@ -68,7 +68,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div className="menu hidden md:block md:w-auto md:w-auto md:h-full" id="navbar">
           <ul className="flex flex-col md:flex-row md:space-x-9 mt-4 md:mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -92,9 +92,9 @@ const Navbar = () => {
                 )}
                 {isLoggedIn && (  
                        <li>
-                  {/* <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto"> */}
+                  <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
                     Logout
-                  {/* </button> */}
+                  </button>
                 </li>
                    )}
               </>
