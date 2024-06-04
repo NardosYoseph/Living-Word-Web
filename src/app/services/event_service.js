@@ -78,7 +78,6 @@ export default class EventServices {
             
     }
     
-    /////////////////////////////////
     static async getAnalytics() {
         const param={"timeframe":"weekly"};
         const client = ApiClient.getInstance();
