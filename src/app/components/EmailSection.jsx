@@ -171,7 +171,7 @@ const EmailSection = () => {
               selectTab={() => handleTabChange("Djibouti")}
               active={tab === "Djibouti"}
             >
-              Djibuti
+              Djibouti
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("Canada")}
