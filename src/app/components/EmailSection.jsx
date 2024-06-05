@@ -58,8 +58,8 @@ const EmailSection = () => {
         </ul>
       ),
     },{
-      title: "Djibuti",
-      id: "Djibuti",
+      title: "Djibouti",
+      id: "Djibouti",
       content: (
         <ul className="list-disc pl-2">
                <br></br>
@@ -168,8 +168,8 @@ const EmailSection = () => {
               Addis Ababa
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("Djibuti")}
-              active={tab === "Djibuti"}
+              selectTab={() => handleTabChange("Djibouti")}
+              active={tab === "Djibouti"}
             >
               Djibuti
             </TabButton>
