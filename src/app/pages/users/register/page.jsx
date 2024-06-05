@@ -17,9 +17,10 @@ const router=useRouter();
     lastname: '',
     email: '',
     password: '',
-    role: 'user',
+    role: 'USER',
+    branch:''
   });
-  const user = new User(formData.firstname,formData.lastname,formData.email, formData.password, formData.role);
+  const user = new User(formData.firstname,formData.lastname,formData.email, formData.password, formData.role,formData.branch);
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -55,7 +56,13 @@ const router=useRouter();
   <input type="text" placeholder="lastname" name="lastname" required onChange={handleChange}/>
   <input type="email" placeholder="email" name="email" required onChange={handleChange}/>
   <input type="password" placeholder="password" name="password" required onChange={handleChange}/>
- 
+  <select name="branch" id="branch" value={formData.branch} onChange={handleChange} className="w-full h-18 p-4 border-2 border-black rounded-md bg-transparent">
+    <option value={false}>Branch</option>
+    <option value="Dir Dawa">Dire Dawa</option>
+    <option value="Addis Ababa">Addis Ababa</option>
+    <option value="Djibouti">Djibouti</option>
+    <option value="Canada">Canada</option>
+  </select>
   <button type="submit">Submit</button>
 <p className="text-white text-base sm:text-lg mb-6 lg:text-xl">already have an account?   <Link href="/pages/users/login">  login</Link></p>
 

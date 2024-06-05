@@ -9,8 +9,16 @@ import jwt_decode from 'jsonwebtoken/decode';
 import UserServices from '@/app/services/user_service';
 import Link from 'next/link';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
 
 const LoginForm = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
  const client = ApiClient.getInstance();
  const { handleLogin} = useContext(AuthContext);
   const router = useRouter();
@@ -58,20 +66,41 @@ const LoginForm = () => {
   };
 
   return (
-    <section className={styles.container} id="login">
-
-    <form className={styles.form} onSubmit={handleSubmit}>
-    <img src="/images/lwlogo.jpg" alt="Company Logo" className='rounded-full w-68 h-52'  />
-
-      {/* <h1>Login</h1> */}
-      <input type="text" placeholder="email" name="email" required onChange={handleChange}/>
-      <input type="password" placeholder="password" name="password" onChange={handleChange}/>      
+    <section  id="login">
+       <div className="container flex min-h-screen w-full justify-center items-center bg-cover bg-center py-4 blur-5px" style={{ backgroundImage: `url('/images/prayers.jpg')` }}>
+<div className="formContainer w-full max-w-lg p-8 bg-white bg-opacity-80 rounded-lg shadow-md pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen ">
       
-      <button type="submit">Login</button>
-      {/* <Link href="/forgotPassword">forgot password?</Link> */}
+    <form className="form flex flex-col items-center gap-6" onSubmit={handleSubmit}>
+    <img src="/images/lwlogo.jpg" alt="Company Logo" className='rounded-full w-68 h-52'  />
+    <input type="text" placeholder="email" name="email" required onChange={handleChange}
+     className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
+     />
+    
+   <div className="relative w-full">
+      <input
+        type={passwordVisible ? "text" : "password"}
+        placeholder="password"
+        name="password"
+        required
+        onChange={handleChange}
+        className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
+      />
+
+      <button
+        type="button"
+        onClick={togglePasswordVisibility}
+        className="absolute inset-y-0 right-0 flex items-center px-4 text-gray-600"
+      >
+        <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+      </button>
+    </div>
+    <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md">Login</button>
+     {/* <Link href="/forgotPassword">forgot password?</Link> */}
       <p>don't have an account?   <Link href="/pages/users/register">signup</Link></p>
        
     </form>
+    </div>
+    </div>
     </section>
   );
 };

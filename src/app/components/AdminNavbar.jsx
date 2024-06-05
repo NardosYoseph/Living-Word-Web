@@ -16,11 +16,11 @@ const navLinks = [
     },
     {
         title: "Users",
-        path: "/",
+        path: "/pages/users",
       },
       {
-        title: "Add Event",
-        path: "/pages/event/add",
+        title: "Events",
+        path: "/pages/event",
       },
   ];
     const [username, setUsername] = useState("");

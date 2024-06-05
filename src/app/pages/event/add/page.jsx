@@ -36,17 +36,7 @@ const AddEventPage = () => {
   
   const [imageUrl, setImageUrl] = useState();
   const [errorMessage, setErrorMessage] = useState('');
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-
-  //     const userPage = await userClients.getAllUsers();
-  //     const userData = userPage.data;
-  //     setUsers(userData);
-  //   };
-
-  //   fetchUsers();
-  // }, [userClients]);
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -166,14 +156,13 @@ const AddEventPage = () => {
             onChange={handleChange}
             className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent"
           />
-       <input
-            type="text"
-            placeholder="address"
-            name="address"
-            required
-            onChange={handleChange}
-            className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
-          />
+     <select name="address" id="address" value={formData.address} onChange={handleChange} className="w-full h-18 p-4 border-2 border-black rounded-md bg-transparent">
+            <option value="">Address</option>
+            <option value="Dire Dawa">Dire Dawa</option>
+            <option value="Addis Ababa">Addis Ababa</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Canada">Canada</option>
+          </select>
           <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md">
             Create Event</button>
           {errorMessage && <p className={styles.error}>{errorMessage}</p>}

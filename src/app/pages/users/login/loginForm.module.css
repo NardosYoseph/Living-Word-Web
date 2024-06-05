@@ -63,6 +63,17 @@
   cursor: pointer;
   border-radius: 5px;
 }
+.form togglebutton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem; /* 1rem equals to 4 in Tailwind's spacing scale */
+  padding-right: 1rem;
+  color: #4B5563; 
+}
 .form select {
   width: 100%;
   padding: 30px;

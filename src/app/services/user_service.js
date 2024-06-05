@@ -40,7 +40,16 @@ export default class UserServices {
         }
     }
 
-
+    static async deleteUser(userId) {
+        const client = ApiClient.getInstance();
+        try{
+            const response = await client.post('/user/deleteUser',userId);
+        return response;
+        }
+        catch (error) {
+            return error;
+        }
+    }
     // static async getUsersSearch(firstname, page, size) {
     //     const queryParam = `Firstname=${firstname}`
     //     try {

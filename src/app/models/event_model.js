@@ -1,7 +1,7 @@
 
 class Event {
-  constructor(id,title, description, date, time,image,address,category) {
-    this.id = id;
+  constructor(_id,title, description, date, time,image,address,category) {
+    this._id = _id;
     this.title = title;
     this.description = description;
     this.date = date;

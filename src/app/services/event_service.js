@@ -50,7 +50,17 @@ export default class EventServices {
     }
       }
       
-      
+      static async deleteEvent(eventId) {
+        const client = ApiClient.getInstance();
+      try{
+        const response = await client.post('/event/delete',{ eventId });
+        
+        return response;
+      }
+      catch (error) {
+        return error;
+    }
+      }
     static async getEventById(id) {
         const client = ApiClient.getInstance();
      try{
