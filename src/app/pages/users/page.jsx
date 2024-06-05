@@ -34,7 +34,7 @@ const UsersPage = () => {
      };
   return (
     <ProtectedRoute allowedRoles={['ADMIN']}>
-    <div className="min-h-screen m-10 p-20 text-xl text-gray-700 bg-white">
+    <div className="min-h-screen min-w-screen m-10 p-20 text-xl text-gray-700 bg-white">
 <AdminNavbar/>
         <Link href="/pages/users/add">
           <button className="px-4 py-2 mb-4 rounded-lg bg-[#7469B6] text-white font-medium cursor-pointer hover:bg-blue-700 mb-0">

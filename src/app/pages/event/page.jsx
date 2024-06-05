@@ -39,7 +39,7 @@ const EventPage = () => {
   
   return (
     <ProtectedRoute allowedRoles={"ADMIN"}>
-    <div className="min-h-screen m-10 p-20 text-xl text-gray-700 bg-white">
+    <div className="min-h-screen min-w-screen m-10 p-20 text-xl text-gray-700 bg-white">
         <AdminNavbar/>
     
         <Link href="/pages/event/add">
@@ -99,7 +99,7 @@ const EventPage = () => {
               })
             ) : (
               <tr>
-                <td colSpan="10">No Incidents found</td>
+                <td colSpan="10">No Events found</td>
               </tr>
             )}
           </tbody>
