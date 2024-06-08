@@ -34,11 +34,11 @@ const RecentEvent = () => {
   };
 
   return (
-    <section id="recentEvents" className="relative overflow-hidden">
+    <section id="recentEvents" className="relative overflow-hidden mb-10">
       <div className="bg-white bg-opacity-20 py-8 px-4 xl:px-16">
         <h1 className="text-3xl font-bold mb-6 text-[#DC5F00]">Recent Events</h1>
         <div className="flex gap-6 relative">
-          <button
+          {/* <button
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white font-extrabold text-4xl sm:text-4xl lg:text-4xl bg-opacity-70 p-4 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none z-10"
             onClick={handlePrev}
           >
@@ -49,8 +49,8 @@ const RecentEvent = () => {
             onClick={handleNext}
           >
             ❯
-          </button>
-          <div className="flex space-x-6">
+          </button> */}
+          <div className="flex space-x-6 overflow-x-auto no-scrollbar">
             {events.map((event, index) => (
               <motion.div
                 key={index}

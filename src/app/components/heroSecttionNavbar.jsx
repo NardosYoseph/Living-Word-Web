@@ -2,8 +2,9 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import MenuOverlay from "./MenuOverlay";
+import HeroNavLink from "./heroNavLink";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const navLinks = [
   {
@@ -20,7 +21,7 @@ const navLinks = [
   },
 ];
 
-const Navbar = () => {
+const HeroNavbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -40,75 +41,76 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = () => {
-    // Clear localStorage
     localStorage.clear();
-    // Redirect to the login page or any other desired page
     window.location.href = "/pages";
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 shadow-xl ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
-      <div className="flex left-0 right-0 container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-1">
-        <Link href='/' className="flex items-start space-x-2 text-xl md:text-3xl text-black font-semibold font-24">
-          {/* <img src='images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-10" /> */}
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${navbarOpen ? 'bg-white' : 'bg-bg-transparent'}`}>
+      <div className="flex container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-1">
+        <Link
+          href="/"
+          className="flex items-start space-x-2 text-xl md:text-3xl text-white font-semibold"
+        >
           <span>Living Word</span>
         </Link>
         {!navbarOpen && (
           <div className="flex space-x-4 md:hidden">
             <Link href="https://facebook.com">
-              <FaFacebook className="text-black hover:text-[#AD88C6] h-5 w-5" />
+              <FaFacebook className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
-              <FaTwitter className="text-black hover:text-[#AD88C6] h-5 w-5" />
+              <FaTwitter className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://instagram.com">
-              <FaInstagram className="text-black hover:text-[#AD88C6] h-5 w-5" />
+              <FaInstagram className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
           </div>
         )}
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
-            
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-black text-black hover:text-[#AD88C6] hover:border-black"
+              className="flex items-center px-3 py-2 border rounded border-white text-white hover:text-gray-200 hover:border-white"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-black text-black hover:text-[#AD88C6] hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-black text-black hover:text-black hover:border-black"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
           )}
         </div>
-        <div className="menu hidden md:flex md:w-auto md:items-center md:space-x-4">
-          <ul className="flex flex-col md:flex-row md:space-x-9 mt-4 md:mt-0">
+        <div className="menu hidden md:flex md:items-center md:space-x-9 mt-4 md:mt-0">
+          <ul className="flex flex-col md:flex-row md:space-x-9">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <HeroNavLink href={link.path} title={link.title} />
               </li>
             ))}
             {!isLoggedIn ? (
               <li>
-                <NavLink href="/pages/users/login" title="Login" />
+                <HeroNavLink href="/pages/users/login" title="Login" />
               </li>
             ) : (
               <>
                 <li>
-                  <span className="text-black">Welcome, {username}</span>
+                  <span className="text-white">Welcome, {username}</span>
                 </li>
-
-                {isLoggedIn && isAdmin && (  // Check both login and role
+                {isLoggedIn && isAdmin && (
                   <li>
-                    <NavLink href="/pages/admin" title="Admin page" />
+                    <HeroNavLink href="/pages/admin" title="Admin page" />
                   </li>
                 )}
                 {isLoggedIn && (
                   <li>
-                    <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black rounded md:p-0 hover:text-yellow font-roboto">
+                    <button
+                      onClick={handleLogout}
+                      className="block py-2 pl-3 pr-4 text-white rounded md:p-0 hover:text-gray-200 font-roboto"
+                    >
                       Logout
                     </button>
                   </li>
@@ -116,15 +118,15 @@ const Navbar = () => {
               </>
             )}
           </ul>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 ml-4">
             <Link href="https://facebook.com">
-              <FaFacebook className="text-black hover:text-[#AD88C6] h-5 w-5" />
+              <FaFacebook className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
-              <FaTwitter className="text-black hover:text-[#AD88C6] h-5 w-5" />
+              <FaTwitter className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://instagram.com">
-              <FaInstagram className="text-black hover:text-[#AD88C6] h-5 w-5" />
+              <FaInstagram className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
           </div>
         </div>
@@ -137,16 +139,14 @@ const Navbar = () => {
               title: !isLoggedIn ? "Login" : `Welcome, ${username}`,
               path: !isLoggedIn ? "/pages/users/login" : "#",
             },
-
             {
               title: isLoggedIn && isAdmin ? "Admin page" : "",
               path: isLoggedIn && isAdmin ? "/pages/admin" : "",
             },
             {
               title: isLoggedIn ? "Logout" : "",
-              onClick: handleLogout // Change the path to the logout endpoint or page
+              onClick: handleLogout,
             },
-
           ]}
         />
       )}
@@ -154,4 +154,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HeroNavbar;

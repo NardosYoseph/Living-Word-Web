@@ -1,28 +1,43 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
 import EmailSection from "../components/EmailSection";
-import Link from "next/link";
-import Image from "next/image";
 import Footer from "../components/Footer";
 import RecentEvent from "../components/videoSection";
+import HeroNavbar from "../components/heroSecttionNavbar";
+import MissionVisionGoalSection from "../components/missionSection";
 
 const HomePage = () => {
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById("hero-section");
+      const rect = heroSection.getBoundingClientRect();
+      setIsHeroVisible(rect.bottom > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <main className="flex min-h-screen  flex-col bg-white gap-8 p-0">
-      
-
-          <Navbar />
-      <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <RecentEvent />
-        <EmailSection />
-        <Footer/>
-
+    <main className="flex flex-col bg-white gap-0 p-0">
+      {isHeroVisible ? <HeroNavbar /> : <Navbar />}
+      <section id="hero-section">
+        <HeroSection />
+        <MissionVisionGoalSection/>
+      </section>
+      <AboutSection />
+      <ProjectsSection />
+      <RecentEvent />
+      {/* <EmailSection /> */}
+      <Footer />
     </main>
   );
 };
