@@ -47,30 +47,27 @@ const [eventsData, setEventsData] = useState([]);
         Upcoming Events
       </h2>
       
-      <div className="text-black flex flex-row w-full min-w-full overflow-x-auto scrollbar gap-0 py-0 p-10 ">
+      <div className="text-black flex flex-row w-full min-w-full overflow-x-auto scrollbar gap-2 py-0 p-10 ">
       <EventCategory
           onClick={handleCategoryChange}
           name="All"
           isSelected={category === "All"}
-          bgColor="#C07F00"
+          
         />
         <EventCategory
           onClick={handleCategoryChange}
           name="Weekly"
           isSelected={category === "Weekly"}
-          bgColor="#005B41"
         />
         <EventCategory
           onClick={handleCategoryChange}
           name="Yearly"
           isSelected={category === "Yearly"}
-          bgColor="#495E57"
         />
           <EventCategory
           onClick={handleCategoryChange}
           name="Special"
           isSelected={category === "Special"}
-          bgColor="#CE5A67"
         />
       </div>
       <ul ref={ref} className="grid top-0 md:grid-cols-3 gap-8 md:gap-12 p-10">

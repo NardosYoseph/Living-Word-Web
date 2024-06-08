@@ -41,26 +41,26 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full"
       >
         <div className="flex w-full h-full">
-          <button 
+          {/* <button 
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black font-extrabold text-4xl sm:text-4xl lg:text-4xl bg-opacity-700 p-2 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none z-10" 
             onClick={prevImage}
           >
             ❮
-          </button>
+          </button> */}
           <Image
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
             className="w-full object-cover"
           fill
           />
-          {nextImageLoaded && (
+          {/* {nextImageLoaded && (
             <button 
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black font-extrabold text-4xl sm:text-4xl lg:text-4xl bg-opacity-700 p-2 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none z-10" 
               onClick={nextImage}
             >
               ❯
             </button>
-          )}
+          )} */}
           <Image
             src={images[(currentIndex + 1) % images.length]}
             alt={`Slide ${currentIndex + 2}`}

@@ -1,23 +1,17 @@
 import React from "react";
 
-const EventCategory = ({ name, onClick, isSelected, bgColor }) => {
+const eventCategory = ({ name, onClick, isSelected }) => {
   const buttonStyles = isSelected
-    ? "text-white border-black"
-    : "text-white hover:border-black";
-    
-  const dynamicStyles = {
-    backgroundColor: bgColor,
-  };
-
+    ? "text-black border-primary-500"
+    : "text-[#ADB7BE] border-slate-600 hover:border-black";
   return (
     <button
-      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer w-30 m-0`}
+      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer w-30`}
       onClick={() => onClick(name)}
-      style={dynamicStyles}
     >
       {name}
     </button>
   );
 };
 
-export default EventCategory;
+export default eventCategory;
