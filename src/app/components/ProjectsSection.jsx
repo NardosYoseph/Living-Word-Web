@@ -42,32 +42,38 @@ const [eventsData, setEventsData] = useState([]);
 
   return (
     <section id="Programmes">
-      <h2 className="text-center text-4xl font-bold text-black mt-8 mb-4 md:mb-8">
-        Programmes News
+    
+      <h2 className="text-center text-3xl font-bold text-black mt-8 mb-2 md:mb-4 ">
+        Upcoming Events
       </h2>
-      <div className="text-black flex flex-row w-full min-w-full overflow-x-auto scrollbar gap-2 py-6 ">
+      
+      <div className="text-black flex flex-row w-full min-w-full overflow-x-auto scrollbar gap-0 py-0 p-10 ">
       <EventCategory
           onClick={handleCategoryChange}
           name="All"
           isSelected={category === "All"}
+          bgColor="#C07F00"
         />
         <EventCategory
           onClick={handleCategoryChange}
           name="Weekly"
           isSelected={category === "Weekly"}
+          bgColor="#005B41"
         />
         <EventCategory
           onClick={handleCategoryChange}
           name="Yearly"
           isSelected={category === "Yearly"}
+          bgColor="#495E57"
         />
           <EventCategory
           onClick={handleCategoryChange}
           name="Special"
           isSelected={category === "Special"}
+          bgColor="#CE5A67"
         />
       </div>
-      <ul ref={ref} className="grid top-0 md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid top-0 md:grid-cols-3 gap-8 md:gap-12 p-10">
         {filteredEvents.map((event, index) => (
           <motion.li
             key={index}

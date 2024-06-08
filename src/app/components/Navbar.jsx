@@ -46,9 +46,9 @@ const Navbar = () => {
   };
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 shadow-xl ${navbarOpen ? 'bg-white' : 'bg-white'}`}>
-      <div className="flex left-0 right-0 container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-     <Link href='/' className="flex items-start space-x-2 text-1xl md:text-3xl text-black font-semibold">
-      <img src='images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-12" />
+      <div className="flex left-0 right-0 container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-1">
+     <Link href='/' className="flex items-start space-x-2 text-xl md:text-3xl text-black font-semibold font-24">
+      <img src='images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-10" />
           <span>Living Word</span>
         </Link>
         <div className="mobile-menu block md:hidden">
@@ -82,7 +82,7 @@ const Navbar = () => {
             ) : (
               <>
                 <li>
-                  <span className="text-black sm:text-xl">Welcome, {username}</span>
+                  <span className="text-black">Welcome, {username}</span>
                 </li>
          
                 {isLoggedIn && isAdmin && (  // Check both login and role
@@ -92,7 +92,7 @@ const Navbar = () => {
                 )}
                 {isLoggedIn && (  
                        <li>
-                  <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black sm:text-xl rounded md:p-0 hover:text-yellow font-roboto">
+                  <button onClick={handleLogout} className="block py-2 pl-3 pr-4 text-black  rounded md:p-0 hover:text-yellow font-roboto">
                     Logout
                   </button>
                 </li>

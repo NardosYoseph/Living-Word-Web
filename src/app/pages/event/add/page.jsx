@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import styles from "./addEvent.module.css";
 import ProtectedRoute from "@/app/lib/protecteRoute";
 //import PaginationManager from '@/app/lib/pagination_manager';
 import EventServices from '@/app/services/event_service';
@@ -45,17 +44,17 @@ const AddEventPage = () => {
     });
     console.log(value);
   };
-  const handleUploadImage = async () => {
+  // const handleUploadImage = async () => {
 
-    try {
-      const userId = await signInAnonymously();
-      const uploadedImageUrl = await uploadImage(imageUrl, userId);
-      setImageUrl(uploadedImageUrl);
-    } catch (error) {
-      console.error('Error uploading image:', error);
-      // Handle upload errors (e.g., display error message)
-    }
-  }
+  //   try {
+  //     const userId = await signInAnonymously();
+  //     const uploadedImageUrl = await uploadImage(imageUrl, userId);
+  //     setImageUrl(uploadedImageUrl);
+  //   } catch (error) {
+  //     console.error('Error uploading image:', error);
+  //     // Handle upload errors (e.g., display error message)
+  //   }
+  // }
   
   const handleImageChange = async (e) => {
     const selectedImage = e.target.files[0];
@@ -81,7 +80,7 @@ const AddEventPage = () => {
 
   const handleSubmit = async (e) => {
      e.preventDefault();
-    await handleUploadImage();
+   // await handleImageChange();
     // Update the formData object with the image URL
     formData.image = imageUrl;
     console.log(imageUrl)
@@ -183,20 +182,14 @@ const AddEventPage = () => {
       };
   
       const uploadTask = uploadBytes(imageRef, image, metadata);
-    // const url=  uploadTask.then((snapshot) => {
-    //     console.log('Image uploaded successfully!',snapshot.ref);
-    //     const downloadUrl = snapshot.ref.getDownloadURL();
-    //     resolve(downloadUrl);
-    //   })
+
       const snapshot = await uploadTask; // Wait for upload completion
 console.log("snapshot",snapshot);
-      // Ensure compatibility with older Firebase versions:
       const downloadUrl = await getDownloadURL(snapshot.ref);
       console.log(downloadUrl)
       return downloadUrl;
     } catch (error) {
       console.error('Error uploading image:', error);
-      // Handle errors appropriately, e.g., return a default URL or throw an error
       return null; // Or throw an error for further handling
     }
   }

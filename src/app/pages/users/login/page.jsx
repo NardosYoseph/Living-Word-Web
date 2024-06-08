@@ -66,14 +66,16 @@ const LoginForm = () => {
   };
 
   return (
-    <section  id="login">
-       <div className="container flex min-h-screen w-full justify-center items-center bg-cover bg-center py-4 blur-5px" style={{ backgroundImage: `url('/images/prayers.jpg')` }}>
-<div className="formContainer w-full max-w-lg p-8 bg-white bg-opacity-80 rounded-lg shadow-md pt-20 pb-8 overflow-y-auto bg-gray-100 min-h-screen ">
-      
-    <form className="form flex flex-col items-center gap-6" onSubmit={handleSubmit}>
-    <img src="/images/lwlogo.jpg" alt="Company Logo" className='rounded-full w-68 h-52'  />
+    <section  id="login" className="w-full h-screen">
+       <div className="flex flex-col w-full min-h-screen justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url('/images/prayers.jpg')` } }>
+<div className="formContainer w-full max-w-lg p-8 bg-white bg-opacity-80 rounded-lg shadow-md pt-20 pb-8 overflow-y-auto bg-gray-100 h-800 mb-10">
+<p className="text-purple-600 text-xl md:text-3xl font-semibold justify-center">Login</p>
+     
+    <form className="form flex flex-col items-center justify-center gap-6 pt-8 pb-20 " onSubmit={handleSubmit}>
+    {/* <img src="/images/lwlogo.jpg" alt="Company Logo" className='rounded-full w-42 h-48'  /> */}
+    {/* <p>Login</p> */}
     <input type="text" placeholder="email" name="email" required onChange={handleChange}
-     className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
+     className="w-full h-10 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
      />
     
    <div className="relative w-full">
@@ -83,7 +85,7 @@ const LoginForm = () => {
         name="password"
         required
         onChange={handleChange}
-        className="w-full h-12 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
+        className="w-full h-10 p-4 border-2 border-black rounded-md bg-transparent placeholder-black-900"
       />
 
       <button
@@ -94,7 +96,7 @@ const LoginForm = () => {
         <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
       </button>
     </div>
-    <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md">Login</button>
+    <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md h-10 flex justify-center items-center">Login</button>
      {/* <Link href="/forgotPassword">forgot password?</Link> */}
       <p>don't have an account?   <Link href="/pages/users/register">signup</Link></p>
        

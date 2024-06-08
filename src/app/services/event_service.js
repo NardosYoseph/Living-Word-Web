@@ -17,16 +17,17 @@ export default class EventServices {
        
     }
     
-    static async getEventsSearch(Name,page,size) {
-        const queryParam = `incident_name=${Name}`; // Construct the query parameter for the search value
-        try{
-          const search = await ApiClient.getInstance().getPaginated(`/incident/list?${queryParam}`,{},page,size);
-        return search;
-        }
-        catch (error) {
-          return error;
-      }
-      }
+    // static async getEventsSearch(Name,page,size) {
+    //     const queryParam = `incident_name=${Name}`; // Construct the query parameter for the search value
+    //     try{
+    //       const search = await ApiClient.getInstance().getPaginated(`/incident/list?${queryParam}`,{},page,size);
+    //     return search;
+    //     }
+    //     catch (error) {
+    //       return error;
+    //   }
+    //   }
+
       static async getEventsFilter(priority,status) {
         try {
             const search = await ApiClient.getInstance().get(`/incident/search`,{priority,status});
@@ -38,6 +39,7 @@ export default class EventServices {
             return error;
         }
     }
+
     static async addEvent(formData) {
         const client = ApiClient.getInstance();
       try{
@@ -49,11 +51,47 @@ export default class EventServices {
         return error;
     }
       }
+
+
+      static async postRecentEvent(formData) {
+        console.log(formData)
+        const client = ApiClient.getInstance();
+      try{
+        const response = await client.post('/event/addRecentEvent', formData);
+        return response;
+      }
+      catch (error) {
+        return error;
+    }
+      }
       
+      static async getRecentEvents() {
+        const client = ApiClient.getInstance();
+        try{
+          const events = await client.get('/event/fetchRecentEvent');
+          console.log(events);
+            return events;
+        }
+        catch (error) {
+          return error;
+      } 
+       
+    }
       static async deleteEvent(eventId) {
         const client = ApiClient.getInstance();
       try{
         const response = await client.post('/event/delete',{ eventId });
+        
+        return response;
+      }
+      catch (error) {
+        return error;
+    }
+      }
+      static async deleteRecentEvent(eventId) {
+        const client = ApiClient.getInstance();
+      try{
+        const response = await client.post('/event/deleteRecentEvent',{ eventId });
         
         return response;
       }

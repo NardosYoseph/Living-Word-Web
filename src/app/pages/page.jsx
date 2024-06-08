@@ -8,31 +8,21 @@ import EmailSection from "../components/EmailSection";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import RecentEvent from "../components/videoSection";
 
 const HomePage = () => {
   return (
-    <main className="flex min-h-screen  flex-col bg-grey">
-      <div className="relative w-full min-h-screen">
-        <Image
-          src="/images/lwpas2.jpg"
-          alt="background"
-          fill
-          className="object-cover z-0"
-        />
-        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
-
-        <div className="relative z-50">
-          <Navbar />
-          <HeroSection />
-        </div>
-      </div>
+    <main className="flex min-h-screen  flex-col bg-white gap-8 p-0">
       
-      <div className="container mx-auto px-12 py-4 mt-24">
+
+          <Navbar />
+      <HeroSection />
         <AboutSection />
         <ProjectsSection />
+        <RecentEvent />
         <EmailSection />
         <Footer/>
-      </div>
+
     </main>
   );
 };
