@@ -11,7 +11,7 @@ const EventCategory = ({ name, onClick, isSelected, bgColor }) => {
 
   return (
     <button
-      className={`${buttonStyles} border-2 px-6 py-3 text-xl cursor-pointer w-30 m-0`}
+      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer w-30 m-0`}
       onClick={() => onClick(name)}
       style={dynamicStyles}
     >
