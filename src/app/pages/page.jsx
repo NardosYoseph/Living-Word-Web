@@ -31,8 +31,9 @@ const HomePage = () => {
       {isHeroVisible ? <HeroNavbar /> : <Navbar />}
       <section id="hero-section">
         <HeroSection />
-        <MissionVisionGoalSection/>
       </section>
+      <MissionVisionGoalSection/>
+
       <AboutSection />
       <ProjectsSection />
       <RecentEvent />
