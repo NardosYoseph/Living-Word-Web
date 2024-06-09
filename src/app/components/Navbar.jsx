@@ -55,7 +55,7 @@ const Navbar = () => {
         </Link>
         {!navbarOpen && (
           <div className="flex space-x-4 md:hidden">
-            <Link href="https://facebook.com">
+            <Link href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL">
               <FaFacebook className="text-black hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
@@ -117,7 +117,7 @@ const Navbar = () => {
             )}
           </ul>
           <div className="flex space-x-4">
-            <Link href="https://facebook.com">
+            <Link href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL">
               <FaFacebook className="text-black hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
