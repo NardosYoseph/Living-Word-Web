@@ -26,7 +26,7 @@ const VideoCard = ({ event }) => {
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <button className="bg-white rounded-full p-2">
-                <FontAwesomeIcon icon={faPlay} className="w-10 h-10 text-gray-800" />
+                <FontAwesomeIcon icon={faPlay} className="w-5 h-5 text-gray-800" />
               </button>
             </div>
           </div>

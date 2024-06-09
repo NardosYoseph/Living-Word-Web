@@ -3,6 +3,7 @@ import EventCard from "./ProjectCard";
 import EventCategory from "./eventCategory";
 import EventServices from '@/app/services/event_service';
 import '../globals.css';
+
 const EventSection = () => {
   const eventClient = EventServices;
   const [eventsData, setEventsData] = useState([]);
@@ -49,48 +50,30 @@ const EventSection = () => {
   };
 
   return (
-    <section id="Programmes" className="bg-gray-200 py-10">
-      <div className="w-full bg-grey-200 flex flex-col justify-center ">
+    <section id="Programmes" className="bg-gray-200 py-10 mt-10" style={{ backgroundImage: 'url(/images/chh.png)', backgroundSize: 'cover' }}>
+      <div className="w-full bg-grey-200 flex flex-col justify-center">
+        <h2 className="text-2xl font-bold text-white text-center">Programmes</h2>
         <div className="text-black flex flex-row w-full min-w-full gap-1 py-0 mt-0 mr-10 justify-center">
-        {/* <h2 className=" text-2xl font-bold text-[#DC5F00] "> Programmes</h2> */}
-
-          <EventCategory
-            onClick={handleCategoryChange}
-            name="All"
-            isSelected={category === "All"}
-          />
-          <EventCategory
-            onClick={handleCategoryChange}
-            name="Weekly"
-            isSelected={category === "Weekly"}
-          />
-          <EventCategory
-            onClick={handleCategoryChange}
-            name="Yearly"
-            isSelected={category === "Yearly"}
-          />
-          <EventCategory
-            onClick={handleCategoryChange}
-            name="Special"
-            isSelected={category === "Special"}
-          />
+          <EventCategory onClick={handleCategoryChange} name="All" isSelected={category === "All"} />
+          <EventCategory onClick={handleCategoryChange} name="Weekly" isSelected={category === "Weekly"} />
+          <EventCategory onClick={handleCategoryChange} name="Yearly" isSelected={category === "Yearly"} />
+          <EventCategory onClick={handleCategoryChange} name="Special" isSelected={category === "Special"} />
         </div>
-        <div className="bg-black-700 mx-10 overflow-hidden relative mt-5">
-          <div ref={containerRef} className="flex gap-6 mt-10 overflow-x-auto no-scrollbar h-full">
+        <div className="relative"> {/* Ensure the container is relative */}
+          <div ref={containerRef} className="flex gap-6 mt-10 overflow-x-auto no-scrollbar h-full relative"> {/* Relative positioning here */}
             {filteredEvents.map((event, index) => (
               <div key={index} className="flex-none" style={{ minWidth: `${cardWidth}px` }}>
-             <div className="h-full flex items-center transform transition-transform duration-300 hover:scale-105"> {/* Ensure the EventCard takes the full height */}
-                
-                <EventCard
-                  key={event.id}
-                  title={event.title}
-                  description={event.description}
-                  imgUrl={event.image}
-                  date={event.date}
-                  time={event.time}
-                  address={event.address}
-                />
-              </div>
+                <div className="h-full flex items-center rounded-gl transform transition-transform duration-300 hover:scale-105">
+                  <EventCard
+                    key={event.id}
+                    title={event.title}
+                    description={event.description}
+                    imgUrl={event.image}
+                    date={event.date}
+                    time={event.time}
+                    address={event.address}
+                  />
+                </div>
               </div>
             ))}
           </div>

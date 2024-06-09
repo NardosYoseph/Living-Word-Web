@@ -55,7 +55,7 @@ const FooterSection = () => {
   <div className="flex flex-col items-center">
     {/* Social Media Icons */}
     <div className="flex items-center space-x-2">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
         <FaFacebook />
       </a>
       <p className="text-center">FaceBook</p>

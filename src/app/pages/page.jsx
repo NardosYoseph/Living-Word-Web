@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import RecentEvent from "../components/videoSection";
 import HeroNavbar from "../components/heroSecttionNavbar";
 import MissionVisionGoalSection from "../components/missionSection";
+import LeadersSection from "../components/leadersSection";
 
 const HomePage = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -33,7 +34,7 @@ const HomePage = () => {
         <HeroSection />
       </section>
       <MissionVisionGoalSection/>
-
+<LeadersSection/>
       <AboutSection />
       <ProjectsSection />
       <RecentEvent />

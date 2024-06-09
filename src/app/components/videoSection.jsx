@@ -36,21 +36,15 @@ const RecentEvent = () => {
   return (
     <section id="recentEvents" className="relative overflow-hidden mb-10">
       <div className="bg-white bg-opacity-20 py-8 px-4 xl:px-16">
-        <h1 className="text-3xl font-bold mb-6 text-[#DC5F00]">Recent Events</h1>
+        <h1 className="text-3xl font-bold mb-6 text-[#DC5F00]">Recent Event Videos</h1>
         <div className="flex gap-6 relative">
-          {/* <button
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white font-extrabold text-4xl sm:text-4xl lg:text-4xl bg-opacity-70 p-4 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none z-10"
-            onClick={handlePrev}
-          >
+      <button onClick={handlePrev} className="absolute rounded-full top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 bg-black text-white z-10">
             ❮
           </button>
-          <button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white font-extrabold text-4xl sm:text-4xl lg:text-4xl bg-opacity-70 p-4 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none z-10"
-            onClick={handleNext}
-          >
+          <button onClick={handleNext} className="absolute rounded-full top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 bg-black text-white z-10">
             ❯
-          </button> */}
-          <div className="flex space-x-6 overflow-x-auto no-scrollbar">
+          </button>
+          <div className="flex space-x-6 overflow-x-auto no-scrollbar ">
             {events.map((event, index) => (
               <motion.div
                 key={index}
@@ -62,7 +56,9 @@ const RecentEvent = () => {
                   marginLeft: index === 0 ? `${currentIndex * -80}px` : undefined,
                 }}
               >
+                <div className='hover:scale-105'>
                 <VideoCard event={event} />
+                </div>
               </motion.div>
             ))}
           </div>

@@ -3,10 +3,10 @@ import { CalendarIcon, ClockIcon, MapPinIcon } from "@heroicons/react/24/outline
 
 const EventCard = ({ imgUrl, title, description, date, time, address }) => {
   return (
-    <div className="overflow-hidden shadow-lg">
+    <div className="overflow-hidden rounded-xl shadow-lg max-w-md max-h-md min-w-md">
       <div
         className="h-48 md:h-72 w-full relative bg-center"
-        style={{
+        style={{ 
           backgroundImage: `url(${imgUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',

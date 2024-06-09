@@ -10,12 +10,12 @@ const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextImageLoaded, setNextImageLoaded] = useState(false);
   const images = [
-    { src: "/images/ch4.png", text: "Bible Studies" },
-    { src: "/images/ch5.png", text: "Prayers " },
-    { src: "/images/com.png", text: "Our Community" },
-    { src: "/images/chh.png", text: "Special Events" },
-    { src: "/images/youth.png", text: "Worship" },
-    { src: "/images/ch7.png", text: "Preaching" },
+    { src: "/images/ch4.png", text: "#Bible Studies" },
+    { src: "/images/ch5.png", text: "#Prayers " },
+    { src: "/images/com.png", text: "#Our Community" },
+    { src: "/images/chh.png", text: "#Special Events" },
+    { src: "/images/youth.png", text: "#Worship" },
+    { src: "/images/ch7.png", text: "#Preaching" },
   ];
 
   const nextImage = () => {
