@@ -41,7 +41,7 @@ const HeroSection = () => {
       className="relative w-full min-w-screen h-[600px] overflow-hidden justify-center items-center bg-cover pb-20"
     >
       {/* <HeroNavbar /> */}
-      <AnimatePresence mode='popLayout'>
+      <AnimatePresence mode='async'>
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0}}
