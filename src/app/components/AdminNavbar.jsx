@@ -95,28 +95,7 @@ const AdminNavbar = () => {
               </li>
             )}
           </ul>
-          {!navbarOpen && (
-             <div className="menu md:block md:w-auto items-center justify-center">
-              <ul className="flex p-4 md:p-0 md:flex-row md:space-x-9 mt-0">
-              <button className="flex items-center space-x-2 text-black">
-                Events
-                <ChevronDownIcon className="w-5 h-5 ml-1" />
-              </button>
-              <ul className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:mt-0 transition-all duration-300">
-                <li>
-                  <Link href="/pages/event/view/upcoming_event" className="block px-4 py-1 text-black hover:bg-gray-100">
-                  Upcoming Events
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pages/event/view/recent_event" className="block px-4 py-1 text-black hover:bg-gray-100">
-                    Recent Events
-                  </Link>
-                </li>
-              </ul>
-              </ul>
-              </div>
-           )}
+          
         </div>
       </div>
       {navbarOpen && (
@@ -124,13 +103,17 @@ const AdminNavbar = () => {
           links={[
             ...navLinks,
             {
-              title: `Welcome, ${username}`,
-              path: "#",
+              title: 'Upcomming Events',
+              path: "/pages/event/view/upcoming_event",
+            }, {
+              title: 'Recent Events',
+              path: "/pages/event/view/recent_event",
             },
             {
               title: isLoggedIn ? "Logout" : "",
               onClick: handleLogout,
             },
+          
           ]}
         />
       )}

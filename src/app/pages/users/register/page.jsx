@@ -57,7 +57,7 @@ const router=useRouter();
 
     <div className="w-full h-screen">
     <ToastContainer />
-    <div className="flex min-h-screen flex-col overflow-hidden w-full h-full justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url('/images/prayers.jpg')` } }>
+    <div className="flex min-h-screen flex-col overflow-hidden w-full h-full justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url('/images/chh.png')` } }>
 <div className="formContainer w-full max-w-lg p-8 bg-white bg-opacity-80 rounded-lg shadow-md pt-20 pb-8 overflow-y bg-gray-100 h-full ">
       <p className="text-purple-600 text-xl md:text-3xl font-semibold justify-center">SignUp</p>
       <form className="form flex flex-col items-center justify-center gap-6 pt-8 pb-20" onSubmit={handleSubmit}>

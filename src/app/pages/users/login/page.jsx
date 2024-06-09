@@ -67,7 +67,7 @@ const LoginForm = () => {
 
   return (
     <section  id="login" className="w-full h-screen">
-       <div className="flex flex-col w-full min-h-screen justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url('/images/prayers.jpg')` } }>
+       <div className="flex flex-col w-full min-h-screen justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url('/images/chh.png')` } }>
 <div className="formContainer w-full max-w-lg p-8 bg-white bg-opacity-80 rounded-lg shadow-md pt-20 pb-8 overflow-y-auto bg-gray-100 h-800 mb-10">
 <p className="text-purple-600 text-xl md:text-3xl font-semibold justify-center">Login</p>
      
