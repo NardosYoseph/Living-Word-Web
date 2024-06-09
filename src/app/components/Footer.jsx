@@ -55,34 +55,38 @@ const FooterSection = () => {
   <div className="flex flex-col items-center">
     {/* Social Media Icons */}
     <div className="flex items-center space-x-2">
-      <a href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-        <FaFacebook />
-      </a>
-      <p className="text-center">FaceBook</p>
-    </div>
+        <a href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+          <FaFacebook />
+          <p className="text-center">FaceBook</p>
+        </a>
+      </div>
     <div className="flex items-center space-x-2">
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
         <FaYoutube />
-      </a>
       <p className="text-center">Youtube</p>
+
+      </a>
     </div>
     <div className="flex items-center space-x-2">
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer " className="flex items-center space-x-2">
         <FaInstagram />
-      </a>
       <p className="text-center">Instagram</p>
+
+      </a>
     </div>
     <div className="flex items-center space-x-2">
-      <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+      <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
         <FaTelegram />
-      </a>
       <p className="text-center">Telegram</p>
+
+      </a>
     </div>
     <div className="flex items-center space-x-2">
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
         <FaTwitter />
-      </a>
       <p className="text-center">Twitter</p>
+
+      </a>
     </div>
   </div>
 </div>
