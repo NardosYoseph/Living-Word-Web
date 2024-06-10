@@ -25,8 +25,8 @@ const VideoCard = ({ event }) => {
               alt={`Thumbnail for ${event.title}`}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <button className="bg-white rounded-full p-2">
-                <FontAwesomeIcon icon={faPlay} className="w-5 h-5 text-gray-800" />
+              <button className="bg-red-700 p-2">
+                <FontAwesomeIcon icon={faPlay} className="w-6 h-6 text-white" />
               </button>
             </div>
           </div>
