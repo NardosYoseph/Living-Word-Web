@@ -11,7 +11,7 @@ const HeroSection = () => {
   const [nextImageLoaded, setNextImageLoaded] = useState(false);
   const images = [
     { src: "/images/ch4.png", text: "#Bible Studies" },
-    { src: "/images/ch5.png", text: "#Prayers " },
+    { src: "/images/pra.jpg", text: "#Prayers " },
     { src: "/images/com.png", text: "#Our Community" },
     { src: "/images/chh.png", text: "#Special Events" },
     { src: "/images/youth.png", text: "#Worship" },

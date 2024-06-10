@@ -50,47 +50,42 @@ const FooterSection = () => {
    
         {/* Social Links */}
         
-        <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0 sm:mt-10 ">
-  <h3 className="text-lg font-semibold mb-4 text-[#DC5F00]">Follow us on social media</h3>
-  <div className="flex flex-col items-center">
-    {/* Social Media Icons */}
-    <div className="flex items-center space-x-2">
+        <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0 sm:mt-10">
+    <h3 className="text-lg font-semibold mb-4 text-[#DC5F00]">Follow us on social media</h3>
+    <div className="flex flex-col items-start">
+      {/* Social Media Icons */}
+      <div className="flex items-center space-x-2 mb-2">
         <a href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
           <FaFacebook />
-          <p className="text-center">FaceBook</p>
+          <p>Facebook</p>
         </a>
       </div>
-    <div className="flex items-center space-x-2">
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-        <FaYoutube />
-      <p className="text-center">Youtube</p>
-
-      </a>
-    </div>
-    <div className="flex items-center space-x-2">
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer " className="flex items-center space-x-2">
-        <FaInstagram />
-      <p className="text-center">Instagram</p>
-
-      </a>
-    </div>
-    <div className="flex items-center space-x-2">
-      <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-        <FaTelegram />
-      <p className="text-center">Telegram</p>
-
-      </a>
-    </div>
-    <div className="flex items-center space-x-2">
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-        <FaTwitter />
-      <p className="text-center">Twitter</p>
-
-      </a>
+      <div className="flex items-center space-x-2 mb-2">
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+          <FaYoutube />
+          <p>Youtube</p>
+        </a>
+      </div>
+      <div className="flex items-center space-x-2 mb-2">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+          <FaInstagram />
+          <p>Instagram</p>
+        </a>
+      </div>
+      <div className="flex items-center space-x-2 mb-2">
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+          <FaTelegram />
+          <p>Telegram</p>
+        </a>
+      </div>
+      <div className="flex items-center space-x-2 mb-2">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+          <FaTwitter />
+          <p>Twitter</p>
+        </a>
+      </div>
     </div>
   </div>
-</div>
-
         {/* <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0 sm:mt-10 justify-center items-center">
  
  <div className="flex flex-col mt-0 ">
@@ -103,8 +98,8 @@ const FooterSection = () => {
         {/* Developed by */}
         <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0">
           <h3 className="text-lg font-semibold mb-4 text-[#DC5F00]">Developed by</h3>
-          <img src="images/logo.jpg" alt="Cassio Logo" width="200" height="90" />
-          <div className="h-5"></div>
+          <img src="images/white.png" alt="Cassio Logo" width="300" height="100" className="mb-0" />
+          {/* <div className="h-5 mt-0 p-0"></div> */}
           <p className="text-white">@2024 Living Word.</p>
          <p className="text-white">All rights reserved.</p>
         <p className="text-slate-600">
