@@ -85,8 +85,7 @@ const FooterSection = () => {
         </a>
       </div>
     </div>
-  </div>
-        {/* <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0 sm:mt-10 justify-center items-center">
+    <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0 sm:mt-10 justify-center items-center mt-20">
  
  <div className="flex flex-col mt-0 ">
    <Link href="#about" className="text-white hover:text-[#DC5F00]">AboutUs</Link>
@@ -94,7 +93,9 @@ const FooterSection = () => {
 <Link href="#recentEvents" className="text-white hover:text-[#DC5F00]">Recent Events</Link>
 <Link href="/pages/login" className="text-white hover:text-[#DC5F00]">Login</Link>
 </div>
-</div> */}
+</div>
+  </div>
+       
         {/* Developed by */}
         <div className="flex flex-col items-center md:w-1/3 mt-10 md:mt-0">
           <h3 className="text-lg font-semibold mb-4 text-[#DC5F00]">Developed by</h3>

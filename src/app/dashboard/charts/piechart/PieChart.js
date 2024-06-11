@@ -12,13 +12,11 @@ const PieChart = ({ EventData }) => {
           'rgba(46, 204, 113, 0.7)',
           'rgba(231, 76, 60, 0.7)',
           'rgba(52, 152, 219, 0.7)',
-          
         ],
         borderColor: [
           'rgba(46, 204, 113, 1)',
           'rgba(231, 76, 60, 1)',
           'rgba(52, 152, 219, 1)',
-        
         ],
         borderWidth: 1,
       },
@@ -31,9 +29,14 @@ const PieChart = ({ EventData }) => {
     plugins: {
       legend: {
         position: 'top',
+        labels: {
+          color: 'white', // Set legend labels color to white
+        },
       },
       tooltip: {
         enabled: true,
+        bodyColor: 'white', // Set tooltip text color to white
+        titleColor: 'white', // Set tooltip title color to white
       },
     },
   };

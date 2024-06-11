@@ -56,7 +56,7 @@ const HeroNavbar = () => {
         </Link>
         {!navbarOpen && (
           <div className="flex space-x-4 md:hidden">
-            <Link href="https://facebook.com">
+            <Link href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL">
               <FaFacebook className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
