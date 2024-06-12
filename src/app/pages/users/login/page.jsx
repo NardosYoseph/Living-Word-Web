@@ -58,6 +58,20 @@ const LoginForm = () => {
       console.error('Error:', error.message);
     }
   };
+  // const handleForgotPassword = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     // Call the backend API to initiate the password reset process
+  //     await UserServices.forgotPassword(credentials.email);
+  //     // Optionally, show a success message to the user
+  //     alert('Password reset email sent. Please check your inbox.');
+  //   } catch (error) {
+  //     // Handle any errors from the backend
+  //     setError('Failed to initiate password reset process. Please try again.');
+  //     console.error('Error:', error.message);
+  //   }
+  // };
 
   return (
     <section id="login" className="w-full h-screen">
@@ -92,7 +106,10 @@ const LoginForm = () => {
             </div>
             {error && <p className="text-red-500 text-sm">{error}</p>} {/* Display error message */}
             <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md h-10 flex justify-center items-center">Login</button>
-            <p>Don't have an account? <Link href="/pages/users/register">Signup</Link></p>
+            <Link type="button" href='/pages/users/forgote_password' className="text-purple-900">
+              Forgot password?
+            </Link>
+            <p>Don't have an account? <Link href="/pages/users/register" className='text-purple-900'>Signup</Link></p>
           </form>
         </div>
       </div>

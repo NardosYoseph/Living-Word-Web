@@ -71,6 +71,7 @@ export default class UserServices {
         }
       }
       
+
       static async changePassword(credentials) {
         const client = ApiClient.getInstance();
     
@@ -123,8 +124,8 @@ export default class UserServices {
     static async forgotPassword(email) {
         const client = ApiClient.getInstance();
         try{
-            const response = await client.post('/forgot-password', email,{});
-        console.log('otp sent successfully', response);
+            const response = await client.post('/users/forgotPassword', email);
+        console.log('Email sent successfully', response);
        
         return response;
 

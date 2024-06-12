@@ -24,7 +24,7 @@ const router=useRouter();
     role: 'USER',
     branch:''
   });
-  const user = new User(formData.firstname,formData.lastname,formData.email, formData.password, formData.role,formData.branch);
+  // const user = new User(formData.firstname,formData.lastname,formData.email, formData.password, formData.role,formData.branch);
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -41,7 +41,7 @@ const router=useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-      const response = await client.register(user);
+      const response = await client.register(formData);
         if (response.message && response.message.toLowerCase().includes('email already exists')) {
           toast.error('Email already exists', { position: 'top-right' });
         } else {

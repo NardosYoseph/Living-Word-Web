@@ -35,14 +35,21 @@ const UsersPage = () => {
 
   return (
     <ProtectedRoute allowedRoles={['ADMIN']}>
-      <div className="min-h-screen min-w-screen flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url('/images/chh.png')` }}>
-        <div className="m-10 p-20 text-xl text-gray-700 bg-white bg-opacity-80 rounded-lg shadow-md w-full max-w-screen-lg">
-          <AdminNavbar />
+      <div className="min-h-screen min-w-screen flex flex-col justify-center items-center bg-cover bg-center" >
+      <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/chh.png')" }}
+        ></div>
+    <div className="relative z-10 m-0 p-4 bg-white bg-opacity-90 shadow-lg mt-20 sm:m-0 ">
+    <AdminNavbar />
+          <div className='gap-0 flex flex-col mt-20 mb-5 sm:flex-row p-0 mr-0 sm:m-0 min-w-full w-full'>
           <Link href="/pages/users/add">
             <button className="px-4 py-2 mb-0 rounded-lg bg-[#7469B6] text-white font-medium cursor-pointer hover:bg-blue-700">
               Add New
             </button>
           </Link>
+          </div>
+          <div className="overflow-x-auto">
           <table className="w-full border-white mt-10 mb-2 text-black">
             <thead>
               <tr>
@@ -77,6 +84,7 @@ const UsersPage = () => {
               )}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </ProtectedRoute>
