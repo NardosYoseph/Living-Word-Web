@@ -1,12 +1,12 @@
 
 import React, { useState, useRef, useEffect } from "react";
 const leaders = [
-  { name: 'Paster Belachew Alemu', church: 'Ejere Church',imgSrc: '/images/pastor2.jpg' },
-  { name: 'Paster Paulos',church: 'Ejere Church', imgSrc: '/images/pastor3.jpg' },
-  { name: 'Zemari Yoseph Dereje', church: 'Dire Dawa Church',imgSrc: '/images/zemari1.jpg' },
-  { name: 'Singer Gemechis Girma', church: 'Addis Ababa Church',imgSrc: '/images/zemari2.jpg' },
-  { name: 'keyboardist Kuma Negesa', church: 'Dire Dawa Church',imgSrc: '/images/key.jpg' },
-  { name: 'Leader 5', church: 'Dire Dawa Church',imgSrc: '/images/chh.png' },
+  { name: 'Paster Belachew Alemu', church: 'Ejere Changare Church',imgSrc: '/images/pastor2.jpg' },
+  { name: 'Paster Paulos',church: 'Ejere Changare Church', imgSrc: '/images/pastor3.jpg' },
+  { name: 'Zemari Yoseph Dereje', church: 'Ejere Changare Church',imgSrc: '/images/zemari1.jpg' },
+  { name: 'Singer Gemechis Girma', church: 'Ejere Changare Church',imgSrc: '/images/zemari2.jpg' },
+  { name: 'keyboardist Kuma Negesa', church: 'Ejere Changare Church',imgSrc: '/images/key.jpg' },
+  { name: 'Leader 5', church: 'Ejere Changare Church',imgSrc: '/images/chh.png' },
 ];
 
 const LeadersSection = () => {
