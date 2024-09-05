@@ -26,15 +26,7 @@ const FooterSection = () => {
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt />
-              <p>Yohannes Building at distance of 100 meter, Dire Dawa, Ethiopia</p>
-            </div>
-            <div className="flex items-center space-x-2">
-              <FaMapMarkerAlt />
-              <p>CMC near Yetebaberut Gas station, Addis Ababa, Ethiopia</p>
-            </div>
-            <div className="flex items-center space-x-2">
-              <FaMapMarkerAlt />
-              <p>123 Main Street, Djibouti, Ethiopia</p>
+              <p>Around Ejere Woreda Education beruae office or behind of Ejere Fenet Acedamy, Dire Dawa, Ethiopia</p>
             </div>
             <div className="flex items-center space-x-2">
               <FaPhoneAlt />
@@ -42,7 +34,7 @@ const FooterSection = () => {
             </div>
             <div className="flex items-center space-x-2">
               <FaEnvelope />
-              <p>livingword@gmail.com</p>
+              <p>EjereChangare@gmail.com</p>
             </div>
           </div>
         </div>
