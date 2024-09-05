@@ -16,7 +16,7 @@ const RecentEventPage = () => {
     console.log(eventData);
     if (eventData) {
       const events = eventData.eventList;
-      setEvents(events);
+      setEvents(events); 
       const initialVisibility = {};
       events.forEach(event => {
         initialVisibility[event._id] = { video: false, thumbnail: false };

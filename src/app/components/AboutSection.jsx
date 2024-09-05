@@ -9,7 +9,7 @@ const AboutSection = () => {
         {/* Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/share.png"
+            src="/images/bg3.jpg"
             alt="about"
             className="object-cover w-full h-full"
             layout="fill" // Ensures the image covers the entire section

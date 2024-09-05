@@ -1,13 +1,12 @@
 
 import React, { useState, useRef, useEffect } from "react";
 const leaders = [
-  { name: 'Pastor Misker Abebe', church: 'Dire Dawa Church',imgSrc: '/images/pastor.jpg' },
-  { name: 'Wengelawi Muse',church: 'Dire Dawa Church', imgSrc: '/images/muse.jpg' },
-  { name: 'Zemari Sami', church: 'Dire Dawa Church',imgSrc: '/images/zemarisami.jpg' },
-  { name: 'Pastor Habtamu Bekele', church: 'Addis Ababa Church',imgSrc: '/images/adispas.jpg' },
-  { name: 'Leader 4', church: 'Dire Dawa Church',imgSrc: '/images/chh.png' },
+  { name: 'Paster Belachew Alemu', church: 'Ejere Church',imgSrc: '/images/pastor2.jpg' },
+  { name: 'Paster Paulos',church: 'Ejere Church', imgSrc: '/images/pastor3.jpg' },
+  { name: 'Zemari Yoseph Dereje', church: 'Dire Dawa Church',imgSrc: '/images/zemari1.jpg' },
+  { name: 'Singer Gemechis Girma', church: 'Addis Ababa Church',imgSrc: '/images/zemari2.jpg' },
+  { name: 'keyboardist Kuma Negesa', church: 'Dire Dawa Church',imgSrc: '/images/key.jpg' },
   { name: 'Leader 5', church: 'Dire Dawa Church',imgSrc: '/images/chh.png' },
-  { name: 'Leader 6', church: 'Dire Dawa Church',imgSrc: '/images/chh.png' },
 ];
 
 const LeadersSection = () => {

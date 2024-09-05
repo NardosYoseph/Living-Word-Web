@@ -53,25 +53,19 @@ const FooterSection = () => {
           <div className="flex flex-col items-start">
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2 mb-2">
-              <a href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+              <a href="https://www.facebook.com/profile.php?id=61552465917880" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <FaFacebook />
                 <p>Facebook</p>
               </a>
             </div>
             <div className="flex items-center space-x-2 mb-2">
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+              <a href="https://www.youtube.com/channel/UCOxjLDqwI0EhMR-RoHrevgQ" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <FaYoutube />
                 <p>Youtube</p>
               </a>
             </div>
             <div className="flex items-center space-x-2 mb-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                <FaInstagram />
-                <p>Instagram</p>
-              </a>
-            </div>
-            <div className="flex items-center space-x-2 mb-2">
-              <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+              <a href="https://t.me/Ejerefullgospelchurch" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <FaTelegram />
                 <p>Telegram</p>
               </a>

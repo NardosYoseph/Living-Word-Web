@@ -12,25 +12,16 @@ const VideoCard = ({ event }) => {
   return (
     <div className="max-w-md rounded-xl overflow-hidden shadow-lg">
       <div onClick={handleVideoClick} className="cursor-pointer relative">
-        {isPlaying ? (
-          <video className="w-full h-48 md:h-72" controls autoPlay>
-            <source src={event.video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        ) : (
-          <div className="h-48 md:h-72 w-full relative bg-center">
-            <img
-              className="w-full h-48 md:h-72 object-cover"
-              src={event.thumbnail}
-              alt={`Thumbnail for ${event.title}`}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="bg-red-700 p-2">
-                <FontAwesomeIcon icon={faPlay} className="w-6 h-6 text-white" />
-              </button>
-            </div>
-          </div>
-        )}
+       
+           <iframe
+           className="w-full h-48 md:h-72"
+           src="https://www.youtube.com/embed/GIvCD47cWTs" // Use the YouTube embed URL here
+           title="YouTube video player"
+           frameBorder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowFullScreen
+         ></iframe>
+       
       </div>
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{event.title}</div>

@@ -46,30 +46,6 @@ const AddRecentEventVideoPage = () => {
     console.log(value);
   };
 
-  // const handleUploadThumbnail = async () => {
-
-  //   try {
-  //     const userId = await signInAnonymously();
-  //     const uploadedImageUrl = await uploadThumbnail(imageUrl, userId);
-  //     setImageUrl(uploadedImageUrl);
-  //   } catch (error) {
-  //     console.error('Error uploading image:', error);
-  //     // Handle upload errors (e.g., display error message)
-  //   }
-  // }
-  
-  // const handleUploadVideo = async () => {
-
-  //   try {
-  //     const userId = await signInAnonymously();
-  //     const uploadedVideoUrl = await uploadVideo(videoUrl, userId);
-  //     setVideoUrl(uploadedVideoUrl);
-  //     console.log(videoUrl)
-  //   } catch (error) {
-  //     console.error('Error uploading image:', error);
-  //     // Handle upload errors (e.g., display error message)
-  //   }
-  // }
   
   const handleThumbnailChange = async (e) => {
     const selectedImage = e.target.files[0];

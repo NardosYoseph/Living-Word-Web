@@ -17,8 +17,10 @@ const HomePage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.getElementById("hero-section");
-      const rect = heroSection.getBoundingClientRect();
-      setIsHeroVisible(rect.bottom > 0);
+      if (heroSection) {
+        const rect = heroSection.getBoundingClientRect();
+        setIsHeroVisible(rect.bottom > 0);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,8 +35,8 @@ const HomePage = () => {
       <section id="hero-section">
         <HeroSection />
       </section>
-      <MissionVisionGoalSection/>
-<LeadersSection/>
+      <MissionVisionGoalSection />
+      <LeadersSection />
       <AboutSection />
       <ProjectsSection />
       <RecentEvent />

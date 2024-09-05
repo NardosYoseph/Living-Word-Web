@@ -157,10 +157,10 @@ const AddEventPage = () => {
           />
      <select name="address" id="address" value={formData.address} onChange={handleChange} className="w-full h-18 p-4 border-2 border-black rounded-md bg-transparent">
             <option value="">Address</option>
-            <option value="Dire Dawa">Dire Dawa</option>
+            {/* <option value="Dire Dawa">Dire Dawa</option> */}
             <option value="Addis Ababa">Addis Ababa</option>
-            <option value="Djibouti">Djibouti</option>
-            <option value="Canada">Canada</option>
+            {/* <option value="Djibouti">Djibouti</option> */}
+            <option value="Ejere">Ejere</option>
           </select>
           <button type="submit" className="w-full p-4 bg-purple-600 text-white rounded-md">
             Create Event</button>

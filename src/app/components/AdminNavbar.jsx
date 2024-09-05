@@ -41,7 +41,7 @@ const AdminNavbar = () => {
       <div className="flex container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-1">
         <Link href='/' className="flex items-center space-x-2 md:text-3xl text-black font-semibold">
           {/* <img src='/images/cross.jpeg' alt="Living Word Logo" className="h-10 md:h-12" /> */}
-          <span>Living Word</span>
+          <span>Ejere Changare</span>
         </Link>
         <div className="mobile-menu block md:hidden ml-4 md:ml-0">
           {!navbarOpen ? (

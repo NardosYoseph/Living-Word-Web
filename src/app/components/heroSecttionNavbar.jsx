@@ -4,7 +4,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import HeroNavLink from "./heroNavLink";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaTelegram } from "react-icons/fa";
 
 const navLinks = [
   {
@@ -52,18 +52,19 @@ const HeroNavbar = () => {
           href="/"
           className="flex items-start space-x-2 text-xl md:text-3xl text-white font-semibold"
         >
-          <span>Living Word</span>
+          <img src='images/logo1.jpg' alt="Living Word Logo" className="h-10 md:h-10" />
+          <span>Ejere Changare</span>
         </Link>
         {!navbarOpen && (
           <div className="flex space-x-4 md:hidden">
-            <Link href="https://www.facebook.com/livingwordchurch2?mibextid=ZbWKwL">
+            <Link href="https://www.facebook.com/profile.php?id=61552465917880">
               <FaFacebook className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
               <FaTwitter className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
-            <Link href="https://instagram.com">
-              <FaInstagram className="text-white hover:text-[#AD88C6] h-5 w-5" />
+            <Link href="https://t.me/Ejerefullgospelchurch">
+              <FaTelegram className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
           </div>
         )}
@@ -119,14 +120,14 @@ const HeroNavbar = () => {
             )}
           </ul>
           <div className="flex space-x-4 ml-4">
-            <Link href="https://facebook.com">
+            <Link href="https://www.facebook.com/profile.php?id=61552465917880">
               <FaFacebook className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
             <Link href="https://twitter.com">
               <FaTwitter className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
-            <Link href="https://instagram.com">
-              <FaInstagram className="text-white hover:text-[#AD88C6] h-5 w-5" />
+            <Link href="https://t.me/Ejerefullgospelchurch">
+              <FaTelegram className="text-white hover:text-[#AD88C6] h-5 w-5" />
             </Link>
           </div>
         </div>
