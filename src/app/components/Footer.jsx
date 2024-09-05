@@ -93,7 +93,7 @@ const FooterSection = () => {
         <div className="flex flex-col items-center md:w-1/4 mt-10 md:mt-0">
           <h3 className="text-lg font-semibold mb-4 text-[#DC5F00]">Developed by</h3>
           <img src="images/white.png" alt="Cassio Logo" width="250" height="100" className="mb-4" />
-          <p className="text-white">@2024 Living Word.</p>
+          <p className="text-white">@2024 Ejere Changare Full Gospel Church.</p>
           <p className="text-white">All rights reserved.</p>
           <p className="text-slate-600">
             <a href="https://cassiopeia.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Cassiopeia Technologies</a>
