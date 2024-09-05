@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from 'react';
 import EventServices from '../services/event_service';
 import VideoCard from './videoCard';

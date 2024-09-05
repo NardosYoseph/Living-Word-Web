@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { CalendarIcon, ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
 

@@ -1,4 +1,4 @@
-
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 const leaders = [
   { name: 'Paster Belachew Alemu', church: 'Ejere Changare Church',imgSrc: '/images/pastor2.jpg' },

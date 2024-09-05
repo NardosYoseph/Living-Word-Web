@@ -1,3 +1,4 @@
+"use client";
 import React, { Suspense, lazy } from "react";
 
 const HeroSection = lazy(() => import("../components/HeroSection"));

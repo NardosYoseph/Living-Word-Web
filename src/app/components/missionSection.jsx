@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaBullseye, FaEye, FaFlag } from "react-icons/fa";
 

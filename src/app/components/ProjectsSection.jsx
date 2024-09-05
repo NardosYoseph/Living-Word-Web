@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import EventCard from "./ProjectCard";
 import EventCategory from "./eventCategory";
