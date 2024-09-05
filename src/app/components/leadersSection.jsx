@@ -35,7 +35,7 @@ const LeadersSection = () => {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Shadow Cover */}
       <div className="relative z-10 container mx-auto px-6 ">
-        <h2 className="text-3xl font-bold mb-10 text-center">Our Leaders</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center">Leaders and Members</h2>
         <div ref={containerRef} className=" flex space-x-10 overflow-x-auto no-scrollbar py-6 px-2">
            {/* <div className="ml-10"></div> */}
           {leaders.map((leader, index) => (
