@@ -15,7 +15,7 @@ const VideoCard = ({ event }) => {
        
            <iframe
            className="w-full h-48 md:h-72"
-           src="https://www.youtube.com/embed/GIvCD47cWTs" // Use the YouTube embed URL here
+           src={event.videoUrl}// Use the YouTube embed URL here
            title="YouTube video player"
            frameBorder="0"
            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

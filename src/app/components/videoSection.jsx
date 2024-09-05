@@ -5,21 +5,27 @@ import { motion } from 'framer-motion';
 
 const RecentEvent = () => {
   const eventClient = EventServices;
-  const [events, setEvents] = useState([]);
+  const events=[
+    {videoUrl:"https://www.youtube.com/embed/GIvCD47cWTs",description:"Sibiraa naaf dhufe humni",title:"Sibiraa naaf dhufe humni"},
+    {videoUrl:"https://www.youtube.com/embed/oZwXirdsK5g",description:"Situ jiraan jira",title:"Situ jiraan jira"},
+    {videoUrl:"https://www.youtube.com/embed/rBB4by7M0Ww",description:"Abdin keenya jiraataadha",title:"Abdin keenya jiraataadha"},
+    {videoUrl:"https://www.youtube.com/embed/FTa1sbWidLg",description:"Aarsaa galata keenyaa",title:"Aarsaa galata keenyaa"},
+    
+    ]
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await eventClient.getRecentEvents();
-        setEvents(response.eventList);
-      } catch (error) {
-        console.error("Error fetching events:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchEvents = async () => {
+  //     try {
+  //       const response = await eventClient.getRecentEvents();
+  //       setEvents(response.eventList);
+  //     } catch (error) {
+  //       console.error("Error fetching events:", error);
+  //     }
+  //   };
 
-    fetchEvents();
-  }, []);
+  //   fetchEvents();
+  // }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>

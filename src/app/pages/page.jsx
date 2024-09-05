@@ -1,15 +1,14 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
-import AboutSection from "../components/AboutSection";
-import ProjectsSection from "../components/ProjectsSection";
-import EmailSection from "../components/EmailSection";
-import Footer from "../components/Footer";
-import RecentEvent from "../components/videoSection";
-import HeroNavbar from "../components/heroSecttionNavbar";
-import MissionVisionGoalSection from "../components/missionSection";
-import LeadersSection from "../components/leadersSection";
+import React, { Suspense, lazy } from "react";
+
+const HeroSection = lazy(() => import("../components/HeroSection"));
+const Navbar = lazy(() => import("../components/Navbar"));
+const AboutSection = lazy(() => import("../components/AboutSection"));
+const ProjectsSection = lazy(() => import("../components/ProjectsSection"));
+const Footer = lazy(() => import("../components/Footer"));
+const RecentEvent = lazy(() => import("../components/videoSection"));
+const HeroNavbar = lazy(() => import("../components/heroSecttionNavbar"));
+const MissionVisionGoalSection = lazy(() => import("../components/missionSection"));
+const LeadersSection = lazy(() => import("../components/leadersSection"));
 
 const HomePage = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
@@ -33,15 +32,18 @@ const HomePage = () => {
     <main className="flex flex-col bg-white gap-0 p-0">
       {isHeroVisible ? <HeroNavbar /> : <Navbar />}
       <section id="hero-section">
-        <HeroSection />
+        <Suspense fallback={<div>Loading...</div>}>
+          <HeroSection />
+        </Suspense>
       </section>
-      <MissionVisionGoalSection />
-      <LeadersSection />
-      <AboutSection />
-      <ProjectsSection />
-      <RecentEvent />
-      {/* <EmailSection /> */}
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <MissionVisionGoalSection />
+        <LeadersSection />
+        <AboutSection />
+        <ProjectsSection />
+        <RecentEvent />
+        <Footer />
+      </Suspense>
     </main>
   );
 };
