@@ -26,7 +26,7 @@ const FooterSection = () => {
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt />
-              <p>Around Ejere Woreda Education beruae office or behind of Ejere Fenet Acedamy, Dire Dawa, Ethiopia</p>
+              <p>Around Ejere Woreda Education beruae office or behind of Ejere Fenet Acedamy, Ejere, Ethiopia</p>
             </div>
             <div className="flex items-center space-x-2">
               <FaPhoneAlt />
