@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy ,useState} from "react";
 
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const Navbar = lazy(() => import("../components/Navbar"));
